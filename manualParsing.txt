@@ -1,0 +1,66 @@
+32　　00　　C0　　57　　00　　88　　8E　　84　　8B　　80　　32　　04　　C8　　08　　A9　　B6
+			randy	『	お	ー	い	、	Pause			み	ん
+start of textbox
+
+9E　　7F　　32　　04　　C8　　08　　FF　　A8　　B8　　9C　　32　　04　　C8　　08　　91　　B3
+な	NL?	Pause			　	ま	っ	て	Pause			く	れ
+
+AF　　8C　　81　　32　　04　　C6　　08　　30　　0C　　01　　28　　10　　05　　09　　31　　00
+よ	う	。
+			Pause＋Movement								attack
+
+88　　08　　31　　00　　88　　08　　8C　　B5　　BC　　82　　34　　00　　9D　　32　　05　　A0
+						う	わ	ぁ	！	
+thing?	attack thing?					bob moves+Next Box
+
+32　　06　　80　　28　　08　　52　　61　　D4　　D2　　86　　57　　00　　A2　　FF　　61　　C3
+						ｓ１	ボ	ブ	「	Randy	の	　	ｓ１ｘ２	グ
+
+C8　　82　　7F　　FF　　63　　D4　　AD　　D4　　AD　　95　　9C　　99　　B0　　FF　　6C　　8F
+ズ	！	NL?	　	ｓ１ｘ４ボ	ヤ	ボ	ヤ	し	て	た	ら	　	ｓ３ｘ１	見
+
+9B　　8F　　B8　　9C　　80　　FF　　6C　　E3　　68　　8D　　9F　　FF　　A8　　99　　8E　　93
+つ	か	っ	て	、	　	ｓ３ｘ１村	ｓ２ｘ１長	に	　	ま	た	お	こ
+
+B0　　B3　　B2　　CA　　82　　28　　00　　7F　　32　　06　　40　　61　　A1　　96　　86　　98
+ら	れ	る	ぞ	！			NL?				ｓ１ｘ２ネ	ス	「	そ
+					ness turns + Next box
+
+8C　　CB　　AF　　81　　6C　　E3　　A2　　8E　　90　　9C　　C7　　B9　　80　　FF　　93　　93
+う	だ	よ	。	ｓ３ｘ１村	の	お	き	て	じ	ゃ	、	　	こ	こ
+
+9F　　90　　9A　　B9　　FF　　8B　　92　　9E　　8B　　B6　　CB　　C9　　81　　FF　　68　　9D
+に	き	ち	ゃ	　	い	け	な	い	ん	だ	ぜ	。	　	ｓ２ｘ１何
+
+CE　　AC　　80　　62　　8E　　D0　　92　　C1　　CE　　B2　　9D　　8F　　85　　28　　00　　7F
+で	も	、	ｓ１ｘ３オ	バ	ケ	が	で	る	と	か	‥			NL?
+													chars turn
+
+32　　05　　C0　　32　　06　　80　　08　　61　　D4　　D2　　86　　A5　　A5　　B6　　80　　69
+							ｓ１	ボ	ブ	「	ふ	ふ	ん	、	ｓ２ｘ２
+Next box
+
+99　　81　　99　　9A　　AC　　FF　　AF　　8C　　9A　　FF　　CB　　AF　　9E　　81　　8E　　B3
+大	人	た	ち	も	　	よ	う	ち	　	だ	よ	な	。	お	れ
+
+99　　9A　　C1　　93　　B5　　C1　　B8　　9C　　7F　　FF　　6C　　C2　　CD　　8F　　9E　　8B
+た	ち	が	こ	わ	が	っ	て	NL	　	ｓ３ｘ１近	づ	か	な	い
+
+9D　　68　　86　　B8　　9C　　B6　　CB　　8F　　B0　　81　　28　　00　　7F　　32　　05　　40
+と	ｓ２ｘ１思	っ	て	ん	だ	か	ら	。
+										Chars turn, next box
+
+86　　CE　　AC　　80　　D0　　8A　　9A　　B9　　B6　　C1　　FF　　6C　　CD　　FF　　68　　F8
+「	で	も	、	ば	あ	ち	ゃ	ん	が	　	ｓ３ｘ１昔	　	ｓ２ｘ１滝
+
+//////////////////////Waterfall
+
+88　　32　　05　　80　　08　　20　　5F　　50　　88　　8B　　B8　　9C　　84　　82　　91　　BE
+								『	い	っ	て	ー	！	く	ぅ
+
+85　　7F　　32　　00　　00　　FF　　93　　B1　　B9　　80　　A2　　D4　　B3　　98　　8C　　9F
+‥	NL				　	こ	り	ゃ	、	の	ば	れ	そ	う	に
+		Char turns
+
+9E　　8B　　9E　　8A　　81　　FF　　CF　　80　　CF　　8C　　95　　AF　　8C　　85　　28　　00
+な	い	な	あ	。	　	ど	、	ど	う	し	よ	う	‥

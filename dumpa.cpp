@@ -2,10 +2,9 @@
 
 //TO-DO:
 //goal: match appearance of in game textbox
-//identify true start and end of text boxes to phase out EOS as start
+//identify true start and end of text boxes to phase out 0x00s as start
 //account for special text effects, like pauses
-//identify autoscroll and buttongated textboxes
-//scroll for end of window
+//identify autoscroll and buttongated textboxes?
 
 //advances to next byte
 void advance(unsigned char &cur, FILE* pROM, int &addr)
@@ -41,18 +40,27 @@ int main()
 			newString = true; //so address will be printed next loop
 			col = -1; //reset column
 		}
-		//player name
+		//charachthtere names
 		else if(cur == 0x57)
 		{
 			advance(cur,pROM,addr);
-			
+			if(newString){fprintf(pDUMP,"\n<%0.6X>\n",addr-1); newString = false;} //address display
+				
 			if(cur == 0x00)
 			{
-				if(newString){fprintf(pDUMP,"\n<%0.6X>\n",addr-1); newString = false;} //address display
-				
 				fprintf(pDUMP,"<ランディ>");
 				col += 4;
 			} 
+			else if(cur == 0x01)
+			{
+				fprintf(pDUMP,"<プリム>");
+				col += 3;
+			}
+			else if(cur == 0x02)
+			{
+				fprintf(pDUMP,"<ポポイ>");
+				col += 3;
+			}
 		}
 		//newline
 		else if(cur == 0x7F)
