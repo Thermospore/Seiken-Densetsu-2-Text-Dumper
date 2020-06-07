@@ -48,7 +48,7 @@ int main()
 			
 			if(cur == 0x00)
 			{
-				if(newString){fprintf(pDUMP,"<%0.6X>\n",addr-1); newString = false;} //address display
+				if(newString){fprintf(pDUMP,"\n<%0.6X>\n",addr-1); newString = false;} //address display
 				
 				fprintf(pDUMP,"<ƒ‰ƒ“ƒfƒB>");
 				col += 4;
@@ -63,7 +63,7 @@ int main()
 		//no shift
 		else if(cur >= 0x80 && cur <= 0xFF)
 		{
-			if(newString){fprintf(pDUMP,"<%0.6X>\n",addr); newString = false;} //address display
+			if(newString){fprintf(pDUMP,"\n<%0.6X>\n",addr); newString = false;} //address display
 			
 			col++; // advance current col
 			if (col == 16)
@@ -207,7 +207,7 @@ int main()
 		//shift 1
 		else if(cur >= 0x60 && cur <= 0x67)
 		{
-			if(newString){fprintf(pDUMP,"<%0.6X>\n",addr); newString = false;}
+			if(newString){fprintf(pDUMP,"\n<%0.6X>\n",addr); newString = false;}
 			
 			unsigned char shiftLength = (cur-0x60);
 			for(int i=0; i <= shiftLength; i++)
@@ -485,7 +485,7 @@ int main()
 		//shift 2
 		else if(cur >= 0x68 && cur <= 0x6B)
 		{
-			if(newString){fprintf(pDUMP,"<%0.6X>\n",addr); newString = false;}
+			if(newString){fprintf(pDUMP,"\n<%0.6X>\n",addr); newString = false;}
 			
 			unsigned char shiftLength = (cur-0x68);
 			for(int i=0; i <= shiftLength; i++)
@@ -763,7 +763,7 @@ int main()
 		//shift 3
 		else if(cur >= 0x6C && cur <= 0x6F)
 		{
-			if(newString){fprintf(pDUMP,"<%0.6X>\n",addr); newString = false;}
+			if(newString){fprintf(pDUMP,"\n<%0.6X>\n",addr); newString = false;}
 			
 			unsigned char shiftLength = (cur-0x6C);
 			for(int i=0; i <= shiftLength; i++)
