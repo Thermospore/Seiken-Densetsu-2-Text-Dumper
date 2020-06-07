@@ -3,6 +3,7 @@
 //TO-DO:
 //goal: match appearance of in game textbox
 //identify true start and end of text boxes to phase out 0x00s as start
+//streamline output and address display
 //account for special text effects, like pauses
 //identify autoscroll and buttongated textboxes?
 
