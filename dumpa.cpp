@@ -5,6 +5,14 @@
 //identify true start and end of text boxes to phase out EOS as start
 //account for special text effects, like pauses
 
+//advances to next byte
+void advance(unsigned char &cur, FILE* pROM, int &addr)
+{
+	fread(&cur, 1, 1, pROM); //read next byte
+	addr++; //update current address
+	return;
+}
+
 int main()
 {
 	unsigned char cur = 0x00; //contents of current byte of the ROM
@@ -21,8 +29,7 @@ int main()
 	//loop through file 1 byte at a time, until end
 	while(!feof(pROM))
 	{
-		fread(&cur, 1, 1, pROM); //read next byte
-		addr++; //update current address
+		advance(cur,pROM,addr);
 		
 		//end of string
 		if(cur == 0x00 && newString == false)
@@ -33,8 +40,8 @@ int main()
 		//player name
 		else if(cur == 0x57)
 		{
-			fread(&cur, 1, 1, pROM);
-			addr++;
+			advance(cur,pROM,addr);
+			
 			if(cur == 0x00)
 			{
 				if(newString){fprintf(pDUMP,"<%0.6X>",addr-1); newString = false;} //address display
@@ -190,8 +197,8 @@ int main()
 			unsigned char shiftLength = (cur-0x60);
 			for(int i=0; i <= shiftLength; i++)
 			{
-				fread(&cur, 1, 1, pROM);
-				addr++;
+				advance(cur,pROM,addr);
+				
 				switch (cur)
 				{
 					case 0x0: fprintf(pDUMP,"A"); break;
@@ -461,8 +468,8 @@ int main()
 			unsigned char shiftLength = (cur-0x68);
 			for(int i=0; i <= shiftLength; i++)
 			{
-				fread(&cur, 1, 1, pROM);
-				addr++;
+				advance(cur,pROM,addr);
+				
 				switch (cur)
 				{
 					case 0x0: fprintf(pDUMP,"‚O"); break;
@@ -732,8 +739,8 @@ int main()
 			unsigned char shiftLength = (cur-0x6C);
 			for(int i=0; i <= shiftLength; i++)
 			{
-				fread(&cur, 1, 1, pROM);
-				addr++;
+				advance(cur,pROM,addr);
+				
 				switch (cur)
 				{
 					case 0x0: fprintf(pDUMP,"Žå"); break;
