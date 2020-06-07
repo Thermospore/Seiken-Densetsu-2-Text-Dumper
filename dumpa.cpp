@@ -1,7 +1,8 @@
 #include<stdio.h>
 
 //TO-DO:
-//account for referencing the save file name
+//goal: match appearance of textbox
+//identify true start and end of text boxes to phase out EOS as start
 //account for special text effects, like pauses
 
 int main()
@@ -41,6 +42,9 @@ int main()
 				fprintf(pDUMP,"<ƒ‰ƒ“ƒfƒB>");
 			} 
 		}
+		//newline
+		else if(cur == 0x7F)
+		{fprintf(pDUMP,"<NL>");}
 		//no shift
 		else if(cur >= 0x80 && cur <= 0xFF)
 		{
