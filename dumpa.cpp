@@ -18,22 +18,22 @@ int main()
 	FILE* pROM = fopen("Seikendensetsu2.D97C.sfc", "rb");
 	FILE* pDUMP = fopen("dump.txt", "w");
 	
-	//loop through file 1 byte at a time
+	//loop through file 1 byte at a time, until end
 	while(!feof(pROM))
 	{
-		fread(&cur, 1, 1, pROM);
-		addr++;
+		fread(&cur, 1, 1, pROM); //read next byte
+		addr++; //update current address
 		
 		//end of string
 		if(cur == 0x00 && newString == false)
 		{
 			fprintf(pDUMP,"<EOS>\n");
-			newString = true;
+			newString = true; //so address will be printed next loop
 		}
 		//no shift
 		else if(cur >= 0x80 && cur <= 0xFF)
 		{
-			if(newString){fprintf(pDUMP,"<%0.6X>",addr); newString = false;}
+			if(newString){fprintf(pDUMP,"<%0.6X>",addr); newString = false;} //address display
 			
 			switch (cur)
 			{
