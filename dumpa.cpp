@@ -3,7 +3,6 @@
 //TO-DO:
 //account for referencing the save file name
 //account for special text effects, like pauses
-//dump SRAM
 
 int main()
 {
@@ -29,6 +28,18 @@ int main()
 		{
 			fprintf(pDUMP,"<EOS>\n");
 			newString = true; //so address will be printed next loop
+		}
+		//player name
+		else if(cur == 0x57)
+		{
+			fread(&cur, 1, 1, pROM);
+			addr++;
+			if(cur == 0x00)
+			{
+				if(newString){fprintf(pDUMP,"<%0.6X>",addr-1); newString = false;} //address display
+				
+				fprintf(pDUMP,"<ƒ‰ƒ“ƒfƒB>");
+			} 
 		}
 		//no shift
 		else if(cur >= 0x80 && cur <= 0xFF)
