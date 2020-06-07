@@ -3,10 +3,13 @@
 //TO-DO:
 //account for referencing the save file name
 //account for special text effects, like pauses
+//dump SRAM
 
 int main()
 {
-	unsigned char cur = 0x00;
+	unsigned char cur = 0x00; //contents of current byte of the ROM
+	int addr = -1; //current address in the ROM
+	bool newString = true; //denotes start of new string (for address display)
 
 	//remove old dump
 	remove("dump.txt");
@@ -19,14 +22,19 @@ int main()
 	while(!feof(pROM))
 	{
 		fread(&cur, 1, 1, pROM);
+		addr++;
 		
 		//end of string
-		if(cur == 0x00)
-		{fprintf(pDUMP,"<EOS>\n");}
-		
+		if(cur == 0x00 && newString == false)
+		{
+			fprintf(pDUMP,"<EOS>\n");
+			newString = true;
+		}
 		//no shift
 		else if(cur >= 0x80 && cur <= 0xFF)
 		{
+			if(newString){fprintf(pDUMP,"<%0.6X>",addr); newString = false;}
+			
 			switch (cur)
 			{
 			    case 0x80: fprintf(pDUMP,"A"); break;
@@ -159,14 +167,16 @@ int main()
 				case 0xFF: fprintf(pDUMP,"@"); break;
 			}
 		}
-		
 		//shift 1
 		else if(cur >= 0x60 && cur <= 0x67)
 		{
+			if(newString){fprintf(pDUMP,"<%0.6X>",addr); newString = false;}
+			
 			unsigned char shiftLength = (cur-0x60);
 			for(int i=0; i <= shiftLength; i++)
 			{
 				fread(&cur, 1, 1, pROM);
+				addr++;
 				switch (cur)
 				{
 					case 0x0: fprintf(pDUMP,"A"); break;
@@ -428,14 +438,16 @@ int main()
 				}
 			}
 		}
-		
 		//shift 2
 		else if(cur >= 0x68 && cur <= 0x6B)
 		{
+			if(newString){fprintf(pDUMP,"<%0.6X>",addr); newString = false;}
+			
 			unsigned char shiftLength = (cur-0x68);
 			for(int i=0; i <= shiftLength; i++)
 			{
 				fread(&cur, 1, 1, pROM);
+				addr++;
 				switch (cur)
 				{
 					case 0x0: fprintf(pDUMP,"‚O"); break;
@@ -697,14 +709,16 @@ int main()
 				}
 			}
 		}
-		
 		//shift 3
 		else if(cur >= 0x6C && cur <= 0x6F)
 		{
+			if(newString){fprintf(pDUMP,"<%0.6X>",addr); newString = false;}
+			
 			unsigned char shiftLength = (cur-0x6C);
 			for(int i=0; i <= shiftLength; i++)
 			{
 				fread(&cur, 1, 1, pROM);
+				addr++;
 				switch (cur)
 				{
 					case 0x0: fprintf(pDUMP,"Žå"); break;
