@@ -1,9 +1,11 @@
 #include<stdio.h>
 
 //TO-DO:
-//goal: match appearance of textbox
+//goal: match appearance of in game textbox
 //identify true start and end of text boxes to phase out EOS as start
 //account for special text effects, like pauses
+//identify autoscroll and buttongated textboxes
+//scroll for end of window
 
 //advances to next byte
 void advance(unsigned char &cur, FILE* pROM, int &addr)
@@ -18,6 +20,7 @@ int main()
 	unsigned char cur = 0x00; //contents of current byte of the ROM
 	int addr = -1; //current address in the ROM
 	bool newString = true; //denotes start of new string (for address display)
+	int col = -1; //denotes current col of printed text
 
 	//remove old dump
 	remove("dump.txt");
@@ -36,6 +39,7 @@ int main()
 		{
 			fprintf(pDUMP,"<EOS>\n");
 			newString = true; //so address will be printed next loop
+			col = -1; //reset column
 		}
 		//player name
 		else if(cur == 0x57)
@@ -44,18 +48,29 @@ int main()
 			
 			if(cur == 0x00)
 			{
-				if(newString){fprintf(pDUMP,"<%0.6X>",addr-1); newString = false;} //address display
+				if(newString){fprintf(pDUMP,"<%0.6X>\n",addr-1); newString = false;} //address display
 				
 				fprintf(pDUMP,"<ƒ‰ƒ“ƒfƒB>");
+				col += 4;
 			} 
 		}
 		//newline
 		else if(cur == 0x7F)
-		{fprintf(pDUMP,"<NL>");}
+		{
+			fprintf(pDUMP,"<NL>\n");
+			col = -1; //reset column
+		}
 		//no shift
 		else if(cur >= 0x80 && cur <= 0xFF)
 		{
-			if(newString){fprintf(pDUMP,"<%0.6X>",addr); newString = false;} //address display
+			if(newString){fprintf(pDUMP,"<%0.6X>\n",addr); newString = false;} //address display
+			
+			col++; // advance current col
+			if (col == 16)
+			{
+				col = 0;
+				fprintf(pDUMP,"<WRAP>\n");
+			}
 			
 			switch (cur)
 			{
@@ -192,12 +207,19 @@ int main()
 		//shift 1
 		else if(cur >= 0x60 && cur <= 0x67)
 		{
-			if(newString){fprintf(pDUMP,"<%0.6X>",addr); newString = false;}
+			if(newString){fprintf(pDUMP,"<%0.6X>\n",addr); newString = false;}
 			
 			unsigned char shiftLength = (cur-0x60);
 			for(int i=0; i <= shiftLength; i++)
 			{
 				advance(cur,pROM,addr);
+				
+				col++; // advance current col
+				if (col == 16)
+				{
+					col = 0;
+					fprintf(pDUMP,"<WRAP>\n");
+				}
 				
 				switch (cur)
 				{
@@ -463,12 +485,19 @@ int main()
 		//shift 2
 		else if(cur >= 0x68 && cur <= 0x6B)
 		{
-			if(newString){fprintf(pDUMP,"<%0.6X>",addr); newString = false;}
+			if(newString){fprintf(pDUMP,"<%0.6X>\n",addr); newString = false;}
 			
 			unsigned char shiftLength = (cur-0x68);
 			for(int i=0; i <= shiftLength; i++)
 			{
 				advance(cur,pROM,addr);
+				
+				col++; // advance current col
+				if (col == 16)
+				{
+					col = 0;
+					fprintf(pDUMP,"<WRAP>\n");
+				}
 				
 				switch (cur)
 				{
@@ -734,12 +763,19 @@ int main()
 		//shift 3
 		else if(cur >= 0x6C && cur <= 0x6F)
 		{
-			if(newString){fprintf(pDUMP,"<%0.6X>",addr); newString = false;}
+			if(newString){fprintf(pDUMP,"<%0.6X>\n",addr); newString = false;}
 			
 			unsigned char shiftLength = (cur-0x6C);
 			for(int i=0; i <= shiftLength; i++)
 			{
 				advance(cur,pROM,addr);
+				
+				col++; // advance current col
+				if (col == 16)
+				{
+					col = 0;
+					fprintf(pDUMP,"<WRAP>\n");
+				}
 				
 				switch (cur)
 				{
