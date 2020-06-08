@@ -3,7 +3,9 @@
 //TO-DO:
 //goal: match appearance of in game textbox
 //account for special text effects, like pauses, movement, etc
-//fix string stuff
+//fix string coding stuff
+//in dump, don't base box spacing on <pause>. maybe count rows->3 or something?
+//option to A) show exactly like game or B) show special codes too
 
 //advances to next byte
 void advance(unsigned char &cur, FILE* pROM, int &addr)
@@ -66,10 +68,16 @@ int main()
 				fprintf(pDUMP,"<WAIT:0x%0.2X>",cur);
 			}
 		}
-		//textbox start
+		//textbox open
 		else if(cur == 0x50)
 		{
-			fprintf(pDUMP,"\n\n<START:0x%0.6X>\n",addr);
+			fprintf(pDUMP,"\n\n<OPEN:0x%0.6X>\n",addr);
+			col = -1;
+		}
+		//textbox close
+		else if(cur == 0x51)
+		{
+			fprintf(pDUMP,"<CLOSE:0x%0.6X>\n\n",addr);
 			col = -1;
 		}
 		//textbox clear

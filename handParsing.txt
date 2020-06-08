@@ -1,20 +1,24 @@
+40　　01　　1C　　4A　　2F　　27　　8D　　06　　50　　32　　00　　03　　32　　04　　C8　　08
+oo carez						>	move?		randy move	pse
+
 32　　00　　C0　　57　　00　　88　　8E　　84　　8B　　80　　32　　04　　C8　　08　　A9　　B6
-			randy	『	お	ー	い	、	Pause			み	ん
-start of textbox
+			randy	『	お	ー	い	、					み	ん
+move?									randy move	stutter
 
 9E　　7F　　32　　04　　C8　　08　　FF　　A8　　B8　　9C　　32　　04　　C8　　08　　91　　B3
-な	NL?	Pause			　	ま	っ	て	Pause			く	れ
+な	NL?					　	ま	っ	て					く	れ
+		randy move	stutter				randy move	stutter	
 
 AF　　8C　　81　　32　　04　　C6　　08　　30　　0C　　01　　28　　10　　05　　09　　31　　00
-よ	う	。
-			Pause＋Movement								attack
-
+よ	う	。								is this a pause?
+														attack?
 88　　08　　31　　00　　88　　08　　8C　　B5　　BC　　82　　34　　00　　9D　　32　　05　　A0
-						う	わ	ぁ	！	
-thing?	attack thing?					bob moves+Next Box
+		attack?			う	わ	ぁ	！	
+	stutter?		stutter?			randcrouch?	bob move
 
 32　　06　　80　　28　　08　　52　　61　　D4　　D2　　86　　57　　00　　A2　　FF　　61　　C3
 						ｓ１	ボ	ブ	「	Randy	の	　	ｓ１ｘ２	グ
+NESS "TURN"	WAIT	CLEAR
 
 C8　　82　　7F　　FF　　63　　D4　　AD　　D4　　AD　　95　　9C　　99　　B0　　FF　　6C　　8F
 ズ	！	NL?	　	ｓ１ｘ４ボ	ヤ	ボ	ヤ	し	て	た	ら	　	ｓ３ｘ１	見
@@ -24,7 +28,7 @@ C8　　82　　7F　　FF　　63　　D4　　AD　　D4　　AD　　95　　
 
 B0　　B3　　B2　　CA　　82　　28　　00　　7F　　32　　06　　40　　61　　A1　　96　　86　　98
 ら	れ	る	ぞ	！			NL?				ｓ１ｘ２ネ	ス	「	そ
-					ness turns + Next box
+					wait		ness turn
 
 8C　　CB　　AF　　81　　6C　　E3　　A2　　8E　　90　　9C　　C7　　B9　　80　　FF　　93　　93
 う	だ	よ	。	ｓ３ｘ１村	の	お	き	て	じ	ゃ	、	　	こ	こ
@@ -34,11 +38,11 @@ B0　　B3　　B2　　CA　　82　　28　　00　　7F　　32　　06　　
 
 CE　　AC　　80　　62　　8E　　D0　　92　　C1　　CE　　B2　　9D　　8F　　85　　28　　00　　7F
 で	も	、	ｓ１ｘ３オ	バ	ケ	が	で	る	と	か	‥			NL?
-													chars turn
+													wait		
 
 32　　05　　C0　　32　　06　　80　　08　　61　　D4　　D2　　86　　A5　　A5　　B6　　80　　69
 							ｓ１	ボ	ブ	「	ふ	ふ	ん	、	ｓ２ｘ２
-Next box
+turn		turn		wait
 
 99　　81　　99　　9A　　AC　　FF　　AF　　8C　　9A　　FF　　CB　　AF　　9E　　81　　8E　　B3
 大	人	た	ち	も	　	よ	う	ち	　	だ	よ	な	。	お	れ
@@ -48,19 +52,58 @@ Next box
 
 9D　　68　　86　　B8　　9C　　B6　　CB　　8F　　B0　　81　　28　　00　　7F　　32　　05　　40
 と	ｓ２ｘ１思	っ	て	ん	だ	か	ら	。
-										Chars turn, next box
+										press	nl	turn
 
 86　　CE　　AC　　80　　D0　　8A　　9A　　B9　　B6　　C1　　FF　　6C　　CD　　FF　　68　　F8
 「	で	も	、	ば	あ	ち	ゃ	ん	が	　	ｓ３ｘ１昔	　	ｓ２ｘ１滝
+////////////
+B2　　B6　　CB　　C9　　82　　28　　00　　32　　05　　C0　　32　　06　　40　　34　　00　　80
+る	ん	だ	ぜ	！
+					press	move		move		??
 
+61　　A1　　96　　86　　94　　8A　　80　　60　　FB　　B7　　8B　　98　　C5　　8C　　82　　08
+ｓ１ｘ２	ネ	ス	「							い	そ	ご	う	！	wait
+
+28　　00　　51　　32　　05　　D0　　32　　06　　D0　　32　　00　　00　　08　　32　　05　　D0
+press	close?										move
+			move		move		??			pause
 //////////////////////Waterfall
 
 88　　32　　05　　80　　08　　20　　5F　　50　　88　　8B　　B8　　9C　　84　　82　　91　　BE
 								『	い	っ	て	ー	！	く	ぅ
-
+							AT START OF TEXT?
 85　　7F　　32　　00　　00　　FF　　93　　B1　　B9　　80　　A2　　D4　　B3　　98　　8C　　9F
 ‥	NL				　	こ	り	ゃ	、	の	ば	れ	そ	う	に
 		Char turns
 
 9E　　8B　　9E　　8A　　81　　FF　　CF　　80　　CF　　8C　　95　　AF　　8C　　85　　28　　00
 な	い	な	あ	。	　	ど	、	ど	う	し	よ	う	‥
+
+
+・・・・・・・・・・・・・・・・・
+7F　　FF　　CE　　AC　　80　　93　　B3　　C7　　B9　　68　　9F　　B3　　9E　　8B　　AF　　81
+NL	　	で	も	、	こ	れ	じ	ゃ	ｓ２ｘ１通	れ	な	い	よ	。
+
+15　　FF　　00　　42　　10　　3F　　10　　00　　06　　30　　10　　03　　27　　48　　50　　88
+	　											
+？
+・・・・・・・・・・・・・・・・・・
+00　　2D　　06　　FF　　43　　50　　FF　　85　　57　　00　　AF　　85　　7F　　FF　　94　　8A
+						　	..	Randy	よ	..	NL	　	さ	あ
+					AT START OF TEXT?
+85　　FF　　FC　　B7　　85　　6C　　E1　　91　　A2　　CB　　85　　28　　04　　2D　　07　　28
+..	　	剣	を	..	ｓ３ｘ１抜	く	の	だ	..
+
+10　　51　　21　　2D　　32　　00　　00　　50　　88　　CB　　B3　　83　　28　　0C　　32　　00
+								『	だ	れ	？
+
+40　　85　　9E　　B6　　CB　　80　　93　　A2　　FC　　A3　　82　　83　　28　　18　　51　　27
+	..	な	ん	だ	、	こ	の	剣	は	！	？
+
+48　　2D　　08　　39　　00　　90　　01　　31　　00　　AD　　50　　88　　B6　　F7　　F7　　F7
+											『	ん	～	～	～
+
+85　　28　　10　　29　　10　　09　　29　　00　　39　　00　　90　　00　　8D　　8B　　B8　　82
+..
+
+28　　04　　51　　39　　00　　90　　01　　2D　　06　　FF　　43　　50　　88　　8C　　B8　　82
