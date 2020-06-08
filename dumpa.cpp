@@ -65,6 +65,12 @@ int main()
 			fprintf(pDUMP,"\n\n<START:0x%0.6X>\n",addr);
 			col = -1;
 		}
+		//textbox clear
+		else if(cur == 0x52)
+		{
+			fprintf(pDUMP,"\n\n<CLEAR:0x%0.6X>\n",addr);
+			col = -1;
+		}
 		//charachthtere names
 		else if(cur == 0x57)
 		{
