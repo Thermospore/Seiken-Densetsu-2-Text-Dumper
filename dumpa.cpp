@@ -2,10 +2,13 @@
 
 //TO-DO:
 //goal: match appearance of in game textbox
+//add back in 0x00? might be needed for those text strings... search Žè‚É“ü‚ê‚½ 
 //account for special text effects, like pauses, movement, etc
 //fix string coding stuff
 //in dump, don't base box spacing on <pause>. maybe count rows->3 or something?
+//which <>s to show address in and which to not?
 //option to A) show exactly like game or B) show special codes too
+//		maybe can pick between the types. ie textbox start/end, line end, and internal effects
 
 //advances to next byte
 void advance(unsigned char &cur, FILE* pROM, int &addr)
@@ -52,6 +55,12 @@ int main()
 		{
 			fprintf(pDUMP,"<...>");
 		}
+		//Unknown. Related to attack moves/rendering?
+		//Actually, maybe to y/n selections?
+		else if(cur == 0x05 || cur == 0x09)
+		{
+			fprintf(pDUMP,"<%0.2X?>",cur);
+		}
 		//textbox transition
 		else if(cur == 0x28)
 		{
@@ -66,6 +75,61 @@ int main()
 			else
 			{
 				fprintf(pDUMP,"<WAIT:0x%0.2X>",cur);
+			}
+		}
+		//unknown
+		else if(cur == 0x30)
+		{
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,"<30?%0.2X>",cur);
+			advance(cur,pROM,addr);
+		}
+		//unknown. attack?
+		else if(cur == 0x31)
+		{
+			advance(cur,pROM,addr);
+			if(cur == 0x00)
+			{
+				//dump control
+				advance(cur,pROM,addr);
+				fprintf(pDUMP,"<ATK>",cur);
+			}
+			else
+			{
+				fprintf(pDUMP,"<31?%0.2X>",cur);	
+			}				
+		}
+		//characchehter movement
+		else if(cur == 0x32)
+		{
+			advance(cur,pROM,addr);
+			//sometimes randy is 0x00, sometimes he is 0x04?
+			//bob and nes are 5/6?
+			if(cur == 0x00 || (cur >= 0x04 && cur <= 0x06))
+			{
+				fprintf(pDUMP,"<MVE%0.2X>",cur);
+				
+				//dump movement control
+				advance(cur,pROM,addr);
+			}
+			else
+			{
+				fprintf(pDUMP,"<32?%0.2X>",cur);
+			}
+		}
+		//chahrahrer action?
+		else if(cur == 0x34)
+		{
+			advance(cur,pROM,addr);
+			if(cur == 0x00)
+			{
+				//dump action control
+				advance(cur,pROM,addr);
+				fprintf(pDUMP,"<ACT>");
+			}
+			else
+			{
+				fprintf(pDUMP,"<34?%0.2X>",cur);
 			}
 		}
 		//textbox open

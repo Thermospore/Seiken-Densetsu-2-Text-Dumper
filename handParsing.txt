@@ -1,20 +1,20 @@
 40　　01　　1C　　4A　　2F　　27　　8D　　06　　50　　32　　00　　03　　32　　04　　C8　　08
-oo carez						>	move?		randy move	pse
+oo carez						>	Randy move	randy move	pse
 
-32　　00　　C0　　57　　00　　88　　8E　　84　　8B　　80　　32　　04　　C8　　08　　A9　　B6
+32　　00　　00　　57　　00　　88　　8E　　84　　8B　　80　　32　　04　　C8　　08　　A9　　B6
 			randy	『	お	ー	い	、					み	ん
-move?									randy move	stutter
+move									randy move	stutter
 
 9E　　7F　　32　　04　　C8　　08　　FF　　A8　　B8　　9C　　32　　04　　C8　　08　　91　　B3
 な	NL?					　	ま	っ	て					く	れ
 		randy move	stutter				randy move	stutter	
 
 AF　　8C　　81　　32　　04　　C6　　08　　30　　0C　　01　　28　　10　　05　　09　　31　　00
-よ	う	。								is this a pause?
-														attack?
+よ	う	。	Move		Stutter			PAUSE.	Worryaboutitlatr
+							eh who knows				attack?
 88　　08　　31　　00　　88　　08　　8C　　B5　　BC　　82　　34　　00　　9D　　32　　05　　A0
 		attack?			う	わ	ぁ	！	
-	stutter?		stutter?			randcrouch?	bob move
+	stutter?		stutter?			randcrouch	bob move
 
 32　　06　　80　　28　　08　　52　　61　　D4　　D2　　86　　57　　00　　A2　　FF　　61　　C3
 						ｓ１	ボ	ブ	「	Randy	の	　	ｓ１ｘ２	グ
@@ -59,7 +59,7 @@ turn		turn		wait
 ////////////
 B2　　B6　　CB　　C9　　82　　28　　00　　32　　05　　C0　　32　　06　　40　　34　　00　　80
 る	ん	だ	ぜ	！
-					press	move		move		??
+					press	move		move		stand up
 
 61　　A1　　96　　86　　94　　8A　　80　　60　　FB　　B7　　8B　　98　　C5　　8C　　82　　08
 ｓ１ｘ２	ネ	ス	「							い	そ	ご	う	！	wait
@@ -67,18 +67,34 @@ B2　　B6　　CB　　C9　　82　　28　　00　　32　　05　　C0　　
 28　　00　　51　　32　　05　　D0　　32　　06　　D0　　32　　00　　00　　08　　32　　05　　D0
 press	close?										move
 			move		move		??			pause
+			
+32　　06　　D0　　34　　00　　88　　08　　50　　88　　8A　　80　　8A　　80　　8E　　B8　　FF
+move		action		pause	『	あ	,	あ	,	お	っ	　
+							window
+
+60　　F6　　9A　　B2　　82　　32　　05　　80　　32　　06　　80　　08　　28　　08　　52　　30
+ｓ１ｘ１	落	ち	る	！	Move		Move		Stutter			
+												WAIT	Clear
+
+01　　04　　32　　05　　90　　32　　06　　90　　08　　8C　　B5　　8A　　32　　05　　BF　　32
+		move		MOre 32		stutう	わ	あ	Move		MVE
+Related to ３０ above?
+
+06　　BF　　31　　00　　A0　　28　　0C　　32　　05　　42　　32　　06　　42　　27　　48　　BC
+		Attack?		Wait
+							Move		Move		Fade?
 //////////////////////Waterfall
 
 88　　32　　05　　80　　08　　20　　5F　　50　　88　　8B　　B8　　9C　　84　　82　　91　　BE
 								『	い	っ	て	ー	！	く	ぅ
-							AT START OF TEXT?
+							START OF TEXT
 85　　7F　　32　　00　　00　　FF　　93　　B1　　B9　　80　　A2　　D4　　B3　　98　　8C　　9F
 ‥	NL				　	こ	り	ゃ	、	の	ば	れ	そ	う	に
-		Char turns
+		randy facing?
 
 9E　　8B　　9E　　8A　　81　　FF　　CF　　80　　CF　　8C　　95　　AF　　8C　　85　　28　　00
 な	い	な	あ	。	　	ど	、	ど	う	し	よ	う	‥
-
+														pause
 
 ・・・・・・・・・・・・・・・・・
 7F　　FF　　CE　　AC　　80　　93　　B3　　C7　　B9　　68　　9F　　B3　　9E　　8B　　AF　　81
