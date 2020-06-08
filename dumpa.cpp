@@ -2,8 +2,10 @@
 
 //TO-DO:
 //goal: match appearance of in game textbox
-//add back in 0x00? might be needed for those text strings... search Žè‚É“ü‚ê‚½ 
-//account for special text effects, like pauses, movement, etc
+//check rest of stuff in playNotes
+//check for EOS misfires
+//store/shop dialogue
+//does 0x28 implicity go to next box??
 //fix string coding stuff
 //in dump, don't base box spacing on <pause>. maybe count rows->3 or something?
 //which <>s to show address in and which to not?
@@ -50,8 +52,14 @@ int main()
 	{
 		advance(cur,pROM,addr);
 		
+		//end of string
+		if(cur == 0x00)
+		{
+			fprintf(pDUMP,"<EOS:0x%0.6X>\n",addr);
+			col = -1;
+		}
 		//text stutter
-		if(cur == 0x08)
+		else if(cur == 0x08)
 		{
 			fprintf(pDUMP,"<...>");
 		}
