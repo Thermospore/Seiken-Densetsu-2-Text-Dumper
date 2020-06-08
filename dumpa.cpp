@@ -45,15 +45,22 @@ int main()
 	{
 		advance(cur,pROM,addr);
 		
+		//text stutter
+		if(cur == 0x08)
+		{
+			fprintf(pDUMP,"<...>");
+		}
 		//textbox transition
-		if (cur == 0x28)
+		else if(cur == 0x28)
 		{
 			advance(cur,pROM,addr);
+			//wait for button press
 			if (cur == 0x00)
 			{
 				fprintf(pDUMP,"<PAUSE>\n\n");
 				col = -1;
 			}
+			//wait for an amount of time
 			else
 			{
 				fprintf(pDUMP,"<WAIT:0x%0.2X>",cur);
