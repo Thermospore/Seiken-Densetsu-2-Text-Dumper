@@ -72,14 +72,17 @@ int main()
 			if(cur == 0x00)
 			{
 				fprintf(pDUMP,"<ランディ>");
+				col += 4;
 			} 
 			else if(cur == 0x01)
 			{
 				fprintf(pDUMP,"<プリム>");
+				col += 3;
 			}
 			else if(cur == 0x02)
 			{
 				fprintf(pDUMP,"<ポポイ>");
+				col += 3;
 			}
 		}
 		//newline
