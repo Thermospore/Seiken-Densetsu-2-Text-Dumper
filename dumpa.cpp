@@ -80,7 +80,7 @@ int main()
 			//wait for an amount of time
 			else
 			{
-				fprintf(pDUMP,"<WAIT:0x%0.2X>",cur);
+				fprintf(pDUMP,"<WAIT%0.2X>",cur);
 			}
 		}
 		//unknown
