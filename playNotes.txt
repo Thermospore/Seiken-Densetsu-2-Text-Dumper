@@ -100,3 +100,9 @@ CHECK FOR OTHER MVEｓ
 げ<...>　お、おまえ剣もってんだろ！<NL:0x0939F7>
 　なんとかしろよ！！<PAUSE>
 GE SHOULDN"T BE THERE. THERE WAS A LONG PAUSE THERE
+・・・・・・・・・・・・・・・・
+村長「‥‥<WAIT:0x10>おお、<ランディ>！<NL:0x093D73>
+<MVE04><MVE05><MVE06><32?07><...><WAIT:0x08><MVE00><...><MVE00><MVE04><MVE05><32?07>ぉ<...><MVE00><32?08>ぉ<...>　こまった事をしてくれた。<NL:0x093DAA>
+　その聖剣はこの村の守り神、<PAUSE>
+Fix o’ｓ
+・・・・・・・・・・・・・・・・・・・・・・
