@@ -2,13 +2,13 @@
 
 //TO-DO:
 //goal: match appearance of in game textbox (bar debug output)
-//check rest of stuff in playNotes
-//check for EOS misfires
-//store/shop dialogue
-//fix string coding stuff
+//check rest of stuff in badParses
+//finish store/inn/options stuff
+//fix string coding stuff, so it doesn't take forever to compile...
 //in dump, don't base box spacing on <pause>. maybe count rows->3 or something?
-//option to A) show exactly like game or B) show special codes too
+//option to A) show exactly like game or B) show special codes too (debug output)
 //		maybe can pick between the types. ie textbox start/end, line end, and internal effects
+//		easiest to do in post processing, rather than adding an if to every single debug output
 
 //advances to next byte
 void advance(unsigned char &cur, FILE* pROM, int &addr)
@@ -177,6 +177,33 @@ int main()
 				fprintf(pDUMP,"<ポポイ>");
 				col += 3;
 			}
+		}
+		//initialize an options list
+		else if(cur == 0x58)
+		{
+			fprintf(pDUMP,"<SEL>");
+		}
+		//set the column/location for an option
+		else if(cur == 0x5A)
+		{
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,"<COL%X>",cur);
+			
+			//there are only 16 columns, so anything more is garbage
+			if (cur < 0xF)
+			{
+				int numSpaces = cur-col-1;
+				while(numSpaces > 0)
+				{
+					gPrint("　",pDUMP,col);
+					numSpaces--;
+				}
+			}
+		}
+		//finalize an options list
+		else if(cur == 0x5B)
+		{
+			fprintf(pDUMP,"</SEL>");
 		}
 		//newline
 		else if(cur == 0x7F)
