@@ -89,3 +89,8 @@ GE SHOULDN"T BE THERE. THERE WAS A LONG PAUSE THERE
 <MVE04><MVE05><MVE06><32?07><...><WAIT:0x08><MVE00><...><MVE00><MVE04><MVE05><32?07>ぉ<...><MVE00><32?08>ぉ<...>　こまった事をしてくれた。<NL:0x093DAA>
 　その聖剣はこの村の守り神、<PAUSE>
 Fix o’ｓ
+・・・・・・・・・・・・・
+<OPEN:0x0A469E>
+<...>←<NL:0x0A46A3>
+　「ニキータの店へようこそ！」　<EOS:0x0A46B8>
+CHECK FOR SPACING CODE?
