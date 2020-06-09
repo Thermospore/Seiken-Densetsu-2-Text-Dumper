@@ -79,3 +79,27 @@ WAIT
 　おとまりに　なりますか？<NL>
 　　（はいいいえ　）<EOS>
 OPTION!Fix wierdness here. see pic
+....................
+<OPEN:0x0935C5>
+まあ、<ランディ>！そんな剣<NL:0x0935D0>
+ふりまわしてると　あぶないわよ！<WRAP>
+村長さんに、いいつけますよ！　<EOS:0x0935F3>
+むぇ
+MUE??
+。。。。。。。。。。
+<OPEN:0x09C9D5>
+「いらっしゃいませ。<NL:0x09C9E2>
+　ごようけんは？<NL:0x09C9EB>
+（<05?>かう<09?>うる　）<EOS:0x09CA01>
+むぱ
+Compare other shop
+
+<OPEN:0x09CA70>
+「ほかにごようは？<NL:0x09CA7A>
+（<05?>かう<09?>うる　）<EOS:0x09CA90>
+、<EOS:0x09CA98>
+<EOS:0x09CA99>
+<EOS:0x09CA9A>
+<30?FA>
+Same
+・・・・・・・・・・・・・・・・・
