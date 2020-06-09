@@ -1,5 +1,2 @@
 ２４　８０　Shop Start?
 5D	5F　Shop start?
-
-１５　FF　００＝End of dialogue box?
-	Is the FF/00 needed or just a spacer?

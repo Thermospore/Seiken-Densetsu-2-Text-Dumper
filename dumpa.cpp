@@ -6,9 +6,12 @@
 //finish store/inn/options stuff
 //fix string coding stuff, so it doesn't take forever to compile...
 //in dump, don't base box spacing on <pause>. maybe count rows->3 or something?
+//		make a function specifically for handling in game NLs, and have it keep track of rows?
+//		and any debug NLs should be purely on top of that
 //option to A) show exactly like game or B) show special codes too (debug output)
 //		maybe can pick between the types. ie textbox start/end, line end, and internal effects
-//		easiest to do in post processing, rather than adding an if to every single debug output
+//		easiest to do in post processing, rather than adding an if to every single debug output?
+//		maybe do it compacktly with that ? operator thing
 
 //advances to next byte
 void advance(unsigned char &cur, FILE* pROM, int &addr)
@@ -117,7 +120,7 @@ int main()
 			advance(cur,pROM,addr);
 			if(cur == 0xFF)
 			{
-				fprintf(pDUMP,"<END>",cur);
+				fprintf(pDUMP,"<RET>",cur);
 			}
 			else
 			{
