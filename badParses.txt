@@ -93,3 +93,17 @@ Fix o’ｓ
 つぐ<NL:094F18>
 　ブロンズランスを手にいれた！　<WAIT10><PAUSE>
 Wierd stuff here. Recieving an item
+・・・・・・・・・・・・・・・
+<OPEN:094581>
+「バッカねー。なにやってんの！？<PAUSE>
+
+『たすけてくれよう！<NL:09459F>
+「シッ！しずかに！<PAUSE>
+This confirms pauses aren't inherently NLｓ．Should fix this
+・・・・・・・・・・・・・・・
+<OPEN:0952C2>
+「ここは　パンドーラ王国の<NL:0952D4>
+　城下町だ。か<STOP>きみがきたら通すよ<WRAP>
+う　ジェマ殿から聞いておる。<PAUSE>
+Uhhhh where is that STOP from lol
+there was a bit of a pause there
