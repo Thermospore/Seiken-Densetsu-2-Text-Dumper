@@ -1,14 +1,12 @@
 #include<stdio.h>
 
 //TO-DO:
-//goal: match appearance of in game textbox
+//goal: match appearance of in game textbox (bar debug output)
 //check rest of stuff in playNotes
 //check for EOS misfires
 //store/shop dialogue
-//does 0x28 implicity go to next box??
 //fix string coding stuff
 //in dump, don't base box spacing on <pause>. maybe count rows->3 or something?
-//which <>s to show address in and which to not?
 //option to A) show exactly like game or B) show special codes too
 //		maybe can pick between the types. ie textbox start/end, line end, and internal effects
 
@@ -90,7 +88,7 @@ int main()
 		{
 			advance(cur,pROM,addr);
 			fprintf(pDUMP,"<30?%0.2X>",cur);
-			advance(cur,pROM,addr);
+			advance(cur,pROM,addr);//dump control
 		}
 		//unknown. attack?
 		else if(cur == 0x31)
@@ -111,19 +109,8 @@ int main()
 		else if(cur == 0x32)
 		{
 			advance(cur,pROM,addr);
-			//sometimes randy is 0x00, sometimes he is 0x04?
-			//bob and nes are 5/6?
-			if(cur == 0x00 || (cur >= 0x04 && cur <= 0x06))
-			{
-				fprintf(pDUMP,"<MVE%0.2X>",cur);
-				
-				//dump movement control
-				advance(cur,pROM,addr);
-			}
-			else
-			{
-				fprintf(pDUMP,"<32?%0.2X>",cur);
-			}
+			fprintf(pDUMP,"<MVE%0.2X>",cur);
+			advance(cur,pROM,addr);//dump movement control
 		}
 		//chahrahrer action?
 		else if(cur == 0x34)

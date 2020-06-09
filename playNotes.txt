@@ -71,14 +71,6 @@ WAIT
 　や、やばいぞ！<EOS>
 WAIT
 ・・・・・・
-<09CC07>
-「１ぱく　<EOS>
-
-<09CC0F>
-ルクですが<NL>
-　おとまりに　なりますか？<NL>
-　　（はいいいえ　）<EOS>
-OPTION!Fix wierdness here. see pic
 ....................
 <OPEN:0x0935C5>
 まあ、<ランディ>！そんな剣<NL:0x0935D0>
@@ -87,13 +79,6 @@ OPTION!Fix wierdness here. see pic
 むぇ
 MUE??
 。。。。。。。。。。
-<OPEN:0x09C9D5>
-「いらっしゃいませ。<NL:0x09C9E2>
-　ごようけんは？<NL:0x09C9EB>
-（<05?>かう<09?>うる　）<EOS:0x09CA01>
-むぱ
-Compare other shop
-
 <OPEN:0x09CA70>
 「ほかにごようは？<NL:0x09CA7A>
 （<05?>かう<09?>うる　）<EOS:0x09CA90>
@@ -101,7 +86,7 @@ Compare other shop
 <EOS:0x09CA99>
 <EOS:0x09CA9A>
 <30?FA>
-Same
+COMPARE OTHE RSHOP
 ・・・・・・・・・・・・・・・・・
 <CLEAR:0x0936FB>
 <MVE06>村長「バカモノ！あそこへ行っては<WRAP>

@@ -1,3 +1,40 @@
+SHOP・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・
+06	03	2D	08	50	5D	5F	86	60	81	D5	91	FF	02	00	61
+				Open		「	ｓ１ｘ１	１	ぱ	く	　			ｓ１ｘ２
+					Shop diaogue open?				Price ref?
+												Check other shops
+
+B2	91	CE	96	C1	7F	FF	8E	9D	A8	B1	9F	FF	9E	B1	A8
+ル	ク	で	す	が	NL	　	お	と	ま	り	に	　	な	り	ま
+
+96	8F	83	7F	FF	FF	F9	58	5A	04	A3	8B	5A	09	8B	8B
+す	か	？	NL	　	　	（				は	い			い	い
+							Selection?			Same 09 as earlier?
+							Presents as a space
+					Check other shops, maybe it's a common pattern
+
+8D	FF	FA	5B	10	4F	13	32	10	4F	00	30	70	00	30	71
+え	　	）	End shop??
+
+OTHER SHOP・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・
+13	12	00	24	80	50	5D	5F	86	8B	B0	B8	95	B9	8B	A8
+					OPEN		「	い	ら	っ	し	ゃ	い	ま
+						Shop diaogue open?
+
+97	81	7F	FF	C5	AF	8C	92	B6	A3	83	7F	59	03	F9	58
+せ	。	NL	　	ご	よ	う	け	ん	は	？	NL			（	
+												３ｘSpaces？
+
+5A	05	8F	8C	5A	09	8C	B2	FF	FA	5B	13	11	13	12	13
+		か	う			う	る	　	）	End shop??
+Same as other shop
+５８５A　０４ｖｓ０５？	Same as other
+				MIGHT BE COLUMN SLELCTIOPN STARTS ON?
+
+CHECK LAST SHOP IN NOTES+ONE IN ORIG SAVE FILE・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・
+
+
+INTRO・・・・・・・・・・・・・・・・・・・・・・・・・・
 40　　01　　1C　　4A　　2F　　27　　8D　　06　　50　　32　　00　　03　　32　　04　　C8　　08
 oo carez						>	Randy move	randy move	pse
 
