@@ -56,6 +56,19 @@ int main()
 			fprintf(pDUMP,"<EOS:0x%0.6X>\n",addr);
 			col = -1;
 		}
+		//inn price reference?
+		else if(cur == 0x02)
+		{
+			advance(cur,pROM,addr);
+			if(cur == 0x00)
+			{
+				fprintf(pDUMP,"<$>");
+			}
+			else
+			{
+				fprintf(pDUMP,"<02?%0.2X>",cur);
+			}
+		}
 		//text stutter
 		else if(cur == 0x08)
 		{
