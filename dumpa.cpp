@@ -4,7 +4,6 @@
 //goal: match appearance of in game textbox (bar debug output)
 //check rest of stuff in badParses
 //finish store/inn/options stuff
-//reduce length of address displaying
 //fix string coding stuff, so it doesn't take forever to compile...
 //in dump, don't base box spacing on <pause>. maybe count rows->3 or something?
 //option to A) show exactly like game or B) show special codes too (debug output)
@@ -84,7 +83,7 @@ int main()
 		//end of string
 		if(cur == 0x00)
 		{
-			fprintf(pDUMP,"<EOS:0x%0.6X>\n",addr);
+			fprintf(pDUMP,"<EOS:%0.6X>\n",addr);
 			col = -1;
 		}
 		//inn price reference?
@@ -174,19 +173,19 @@ int main()
 		//textbox open
 		else if(cur == 0x50)
 		{
-			fprintf(pDUMP,"\n\n<OPEN:0x%0.6X>\n",addr);
+			fprintf(pDUMP,"\n\n<OPEN:%0.6X>\n",addr);
 			col = -1;
 		}
 		//textbox close
 		else if(cur == 0x51)
 		{
-			fprintf(pDUMP,"<CLOSE:0x%0.6X>\n\n",addr);
+			fprintf(pDUMP,"<CLOSE:%0.6X>\n\n",addr);
 			col = -1;
 		}
 		//textbox clear
 		else if(cur == 0x52)
 		{
-			fprintf(pDUMP,"\n\n<CLEAR:0x%0.6X>\n",addr);
+			fprintf(pDUMP,"\n\n<CLEAR:%0.6X>\n",addr);
 			col = -1;
 		}
 		//charachthtere names
@@ -239,7 +238,7 @@ int main()
 		//newline
 		else if(cur == 0x7F)
 		{
-			fprintf(pDUMP,"<NL:0x%0.6X>\n",addr);
+			fprintf(pDUMP,"<NL:%0.6X>\n",addr);
 			col = -1;
 		}
 		//no shift
