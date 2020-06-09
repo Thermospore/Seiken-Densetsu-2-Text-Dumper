@@ -1,0 +1,7 @@
+２４
+	８０　Shop Start?
+
+１５
+	FF
+		００＝End of dialogue box?
+	Is the FF/00 needed or just a spacer?
