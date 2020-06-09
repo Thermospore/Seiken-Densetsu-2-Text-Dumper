@@ -106,3 +106,19 @@ GE SHOULDN"T BE THERE. THERE WAS A LONG PAUSE THERE
 　その聖剣はこの村の守り神、<PAUSE>
 Fix o’ｓ
 ・・・・・・・・・・・・・・・・・・・・・・
+<OPEN:0x093FC8>
+「もう、じゅんびはいいのか？<NL:0x093FD7>
+　　（はい<09?>いいえ　　）<EOS:0x093FEF>
+NON SHOP OPTIONS TO COMPARE
+・・・・・・・・・・・・・・・・・・・・・・・・
+<CLEAR:0x093027>
+「大砲で神殿まで　ひとっとび！<NL:0x09303B>
+　ジェマさんに　おまえのぶんも<NL:0x09304C>
+　お金をもらったよ。のってく？<PAUSE>
+
+<NL:0x09305F>
+<NL:0x093060>
+　　（たのむ<...>ことわる　）<EOS:0x093073>
+<EOS:0x093074>
+MORE NON SHOP Options
+・・・・・・・・・・・・・・・・・・・・・・
