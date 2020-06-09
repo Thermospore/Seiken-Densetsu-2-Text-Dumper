@@ -204,7 +204,7 @@ int main()
 		//finalize an options list
 		else if(cur == 0x5B)
 		{
-			fprintf(pDUMP,"</SEL>");
+			fprintf(pDUMP,"</SEL>\n\n");
 		}
 		//newline
 		else if(cur == 0x7F)
