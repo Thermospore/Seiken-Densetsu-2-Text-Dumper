@@ -103,3 +103,15 @@ Compare other shop
 <30?FA>
 Same
 ・・・・・・・・・・・・・・・・・
+<CLEAR:0x0936FB>
+<MVE06>村長「バカモノ！あそこへ行っては<WRAP>
+　ならんといっておいただろうが！<WRAP>
+　まったく　このワルガキどもが！<MVE00><MVE04><MVE05><...><WAIT:0x01><MVE00><MVE04><MVE05><...><WAIT:0x01><MVE00><MVE04><MVE05><...><WAIT:0x01><MVE00><MVE04><...><PAUSE>
+CHECK FOR OTHER MVEｓ
+
+・・・・・・・・・・・・・・・・・・
+<OPEN:0x0939D2>
+ボブ「うわ！ば、ばけものだあ！！<WRAP>
+げ<...>　お、おまえ剣もってんだろ！<NL:0x0939F7>
+　なんとかしろよ！！<PAUSE>
+GE SHOULDN"T BE THERE. THERE WAS A LONG PAUSE THERE
