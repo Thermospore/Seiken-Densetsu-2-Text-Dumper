@@ -4,7 +4,6 @@
 //goal: match appearance of in game textbox (bar debug output)
 //check rest of stuff in badParses
 //finish store/inn/options stuff
-//add some NLs once options end?
 //fix string coding stuff, so it doesn't take forever to compile...
 //in dump, don't base box spacing on <pause>. maybe count rows->3 or something?
 //option to A) show exactly like game or B) show special codes too (debug output)
@@ -29,6 +28,36 @@ void gPrint(char* moji, FILE* pDUMP, int &col)
 		col = 0;
 	}
 	fprintf(pDUMP,"%s",moji); //print char
+	return;
+}
+
+//Sets column (by spitting out spaces)
+void setCol(unsigned char cur, FILE* pDUMP, int &col)
+{
+	//there are only 16 columns, so anything more is garbage
+	if (cur < 0xF)
+	{
+		int numSpaces = 0;
+		
+		//to account for wrapping
+		if(col == 15)
+		{numSpaces = cur;}
+		else
+		{numSpaces = cur-col-1;}
+		
+		if(numSpaces > 0)
+		{
+			while(numSpaces > 0)
+			{
+				gPrint("Å@",pDUMP,col);
+				numSpaces--;
+			}
+		}
+		else if(numSpaces < 0)
+		{
+			fprintf(pDUMP,"<COLNEG%X>",numSpaces*-1);
+		}
+	}
 	return;
 }
 
@@ -179,29 +208,29 @@ int main()
 				col += 3;
 			}
 		}
-		//initialize an options list
+		//initialize a selection list?
 		else if(cur == 0x58)
 		{
 			fprintf(pDUMP,"<SEL>");
 		}
-		//set the column/location for an option
-		else if(cur == 0x5A)
+		//set current column
+		//(this is independent of selection lists)
+		else if(cur == 0x59)
 		{
 			advance(cur,pROM,addr);
 			fprintf(pDUMP,"<COL%X>",cur);
 			
-			//there are only 16 columns, so anything more is garbage
-			if (cur < 0xF)
-			{
-				int numSpaces = cur-col-1;
-				while(numSpaces > 0)
-				{
-					gPrint("Å@",pDUMP,col);
-					numSpaces--;
-				}
-			}
+			setCol(cur,pDUMP,col);			
 		}
-		//finalize an options list
+		//set the column/location for a selection?
+		else if(cur == 0x5A)
+		{
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,"<SCOL%X>",cur);
+			
+			setCol(cur,pDUMP,col);	
+		}
+		//finalize a selection list?
 		else if(cur == 0x5B)
 		{
 			fprintf(pDUMP,"</SEL>\n\n");
