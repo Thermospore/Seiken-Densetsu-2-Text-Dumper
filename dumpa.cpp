@@ -134,8 +134,7 @@ int main()
 			//wait for button press
 			if (cur == 0x00)
 			{
-				fprintf(pDUMP,"<PAUSE>\n\n");
-				col = -1;
+				fprintf(pDUMP,"<PAUSE>");
 			}
 			//wait for an amount of time
 			else
@@ -196,7 +195,7 @@ int main()
 		//textbox close
 		else if(cur == 0x51)
 		{
-			fprintf(pDUMP,"<CLOSE:%0.6X>\n\n",addr);
+			fprintf(pDUMP,"\n<CLOSE:%0.6X>\n\n",addr);
 			col = -1;
 		}
 		//textbox clear

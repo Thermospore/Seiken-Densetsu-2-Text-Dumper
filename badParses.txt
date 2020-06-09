@@ -107,3 +107,12 @@ This confirms pauses aren't inherently NLｓ．Should fix this
 う　ジェマ殿から聞いておる。<PAUSE>
 Uhhhh where is that STOP from lol
 there was a bit of a pause there
+////////////////
+<OPEN:09598D>
+タナトス「わるいな、すでに生気を<WRAP>
+　ぬかせてもらったよ。その娘は<NL:0959B1>
+　もう私のちゅうじつなしもべさ。<PAUSE><プリム>『なんてことを！<NL:0959CF>
+タナトス「すいとった人々の生気は<WRAP>
+　このさいだんの下に封じてある。<PAUSE><WRAP>
+「フッ、おとなしく帝国にこうふく<WRAP>
+wierdness. I think the <プリム> is preventing wrap, since it's a debug output not a gPrint output
