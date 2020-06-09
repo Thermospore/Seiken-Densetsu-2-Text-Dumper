@@ -4,6 +4,7 @@
 //goal: match appearance of in game textbox (bar debug output)
 //check rest of stuff in badParses
 //finish store/inn/options stuff
+//reduce length of address displaying
 //fix string coding stuff, so it doesn't take forever to compile...
 //in dump, don't base box spacing on <pause>. maybe count rows->3 or something?
 //option to A) show exactly like game or B) show special codes too (debug output)
