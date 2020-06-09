@@ -90,3 +90,6 @@ GE SHOULDN"T BE THERE. THERE WAS A LONG PAUSE THERE
 　その聖剣はこの村の守り神、<PAUSE>
 Fix o’ｓ
 ・・・・・・・・・・・・・・・
+つぐ<NL:094F18>
+　ブロンズランスを手にいれた！　<WAIT10><PAUSE>
+Wierd stuff here. Recieving an item
