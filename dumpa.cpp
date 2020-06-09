@@ -83,7 +83,7 @@ int main()
 		//end of string
 		if(cur == 0x00)
 		{
-			fprintf(pDUMP,"<EOS:%0.6X>\n",addr);
+			fprintf(pDUMP,"<EOS:%0.6X>\n\n",addr);
 			col = -1;
 		}
 		//inn price reference?
@@ -109,6 +109,20 @@ int main()
 		else if(cur == 0x05 || cur == 0x09)
 		{
 			fprintf(pDUMP,"<%0.2X?>",cur);
+		}
+		//Pause at end of dialogue, close window after a button press,
+		//then restore control to charachchther
+		else if(cur == 0x15)
+		{
+			advance(cur,pROM,addr);
+			if(cur == 0xFF)
+			{
+				fprintf(pDUMP,"<END>",cur);
+			}
+			else
+			{
+				fprintf(pDUMP,"<15?%0.2X>",cur);
+			}
 		}
 		//textbox transition
 		else if(cur == 0x28)
