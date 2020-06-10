@@ -20,19 +20,6 @@ void advance(unsigned char &cur, FILE* pROM, int &addr)
 	return;
 }
 
-//Prints game text
-void gPrint(char* moji, FILE* pDUMP, int &col)
-{
-	col++; //advance column
-	if (col == 16) //wrap column
-	{
-		fprintf(pDUMP,"<CWRAP>\n");
-		col = 0;
-	}
-	fprintf(pDUMP,"%s",moji); //print char
-	return;
-}
-
 //Handles in game NewLines
 void gNL(FILE* pDUMP, int &col, int &row)
 {
@@ -51,8 +38,23 @@ void gNL(FILE* pDUMP, int &col, int &row)
 	return;
 }
 
+//Prints game text
+void gPrint(char* moji, FILE* pDUMP, int &col, int &row)
+{
+	//wrap column
+	if (col == 15)
+	{
+		fprintf(pDUMP,"<CWRAP>");
+		gNL(pDUMP,col,row);
+	}
+	
+	col++; //advance column
+	fprintf(pDUMP,"%s",moji); //print char
+	return;
+}
+
 //Sets column (by spitting out spaces)
-void setCol(unsigned char cur, FILE* pDUMP, int &col)
+void setCol(unsigned char cur, FILE* pDUMP, int &col, int &row)
 {
 	//there are only 16 columns, so anything more is garbage
 	if (cur < 0xF)
@@ -69,7 +71,7 @@ void setCol(unsigned char cur, FILE* pDUMP, int &col)
 		{
 			while(numSpaces > 0)
 			{
-				gPrint("Å@",pDUMP,col);
+				gPrint("Å@",pDUMP,col,row);
 				numSpaces--;
 			}
 		}
@@ -106,6 +108,7 @@ int main()
 		{
 			fprintf(pDUMP,"<EOS:%0.6X>\n\n",addr);
 			col = -1;
+			row = 0;
 		}
 		//inn price reference?
 		else if(cur == 0x02)
@@ -137,6 +140,8 @@ int main()
 			{
 				fprintf(pDUMP,"<15?%0.2X>",cur);
 			}
+			col = -1;
+			row = 0;
 		}
 		//without it the chars/camera wont't get in formation???
 		//seen at start of shops???
@@ -145,7 +150,7 @@ int main()
 			advance(cur,pROM,addr);
 			fprintf(pDUMP,"<FORM?%0.2X>",cur);
 		}
-		//textbox transition
+		//pauses
 		else if(cur == 0x28)
 		{
 			advance(cur,pROM,addr);
@@ -209,18 +214,21 @@ int main()
 		{
 			fprintf(pDUMP,"\n\n<OPEN:%0.6X>\n",addr);
 			col = -1;
+			row = 0;
 		}
 		//textbox close
 		else if(cur == 0x51)
 		{
 			fprintf(pDUMP,"\n<CLOSE:%0.6X>\n\n",addr);
 			col = -1;
+			row = 0;
 		}
 		//textbox clear
 		else if(cur == 0x52)
 		{
-			fprintf(pDUMP,"\n\n<CLEAR:%0.6X>\n",addr);
+			fprintf(pDUMP,"\n<CLEAR:%0.6X>\n",addr);
 			col = -1;
+			row = 0;
 		}
 		//charachthtere names
 		else if(cur == 0x57)
@@ -254,7 +262,7 @@ int main()
 			advance(cur,pROM,addr);
 			fprintf(pDUMP,"<COL%X>",cur);
 			
-			setCol(cur,pDUMP,col);			
+			setCol(cur,pDUMP,col,row);			
 		}
 		//set the column/location for a selection?
 		else if(cur == 0x5A)
@@ -262,7 +270,7 @@ int main()
 			advance(cur,pROM,addr);
 			fprintf(pDUMP,"<SCOL%X>",cur);
 			
-			setCol(cur,pDUMP,col);	
+			setCol(cur,pDUMP,col,row);	
 		}
 		//finalize a selection list?
 		else if(cur == 0x5B)
@@ -282,8 +290,8 @@ int main()
 		//newline
 		else if(cur == 0x7F)
 		{
-			fprintf(pDUMP,"<NL:%0.6X>\n",addr);
-			col = -1;
+			fprintf(pDUMP,"<NL:%0.6X>",addr);
+			gNL(pDUMP,col,row);
 		}
 		//no shift
 		else if(cur >= 0x80 && cur <= 0xFF)
@@ -419,7 +427,7 @@ int main()
 				case 0xFE: moji = "ê‡";  break;
 				case 0xFF: moji = "Å@";  break;
 			}
-			gPrint(moji,pDUMP,col);
+			gPrint(moji,pDUMP,col,row);
 		}
 		//shift 1
 		else if(cur >= 0x60 && cur <= 0x67)
@@ -687,7 +695,7 @@ int main()
 					case 0xFE: moji = "âπ";  break;
 					case 0xFF: moji = "Å§";  break;
 				}
-				gPrint(moji,pDUMP,col);
+				gPrint(moji,pDUMP,col,row);
 			}
 		}
 		//shift 2
@@ -956,7 +964,7 @@ int main()
 					case 0xFE: moji = "Å©";  break;
 					case 0xFF: moji = "Å®";  break;
 				}
-				gPrint(moji,pDUMP,col);
+				gPrint(moji,pDUMP,col,row);
 			}
 		}
 		//shift 3
@@ -1225,7 +1233,7 @@ int main()
 					case 0xFE: moji = "àÛ";  break;
 					case 0xFF: moji = "ï∑";  break;
 				}
-				gPrint(moji,pDUMP,col);
+				gPrint(moji,pDUMP,col,row);
 			}
 		}
 	}
