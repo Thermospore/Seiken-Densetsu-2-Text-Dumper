@@ -248,7 +248,7 @@ int main()
 		//finalize a selection list?
 		else if(cur == 0x5B)
 		{
-			fprintf(pDUMP,"</SEL>\n\n");
+			fprintf(pDUMP,"</SEL>\n");
 		}
 		//bring up subtextbox (IE to display your money in a shop)
 		else if(cur == 0x5D)
