@@ -3,14 +3,12 @@
 //TO-DO:
 //goal: match appearance of in game textbox (bar debug output)
 //check rest of stuff in badParses
-//finish store/inn/options stuff
 //fix string coding stuff, so it doesn't take forever to compile...
 //in dump, don't base box spacing on <pause>. maybe count rows->3 or something?
 //		make a function specifically for handling in game NLs, and have it keep track of rows?
 //		and any debug NLs should be purely on top of that
 //		gNL; CWRAP and RWRAP?
 //option to A) show exactly like game or B) show special codes too (debug output)
-//		maybe can pick between the types. ie textbox start/end, line end, and internal effects
 //		easiest to do in post processing, rather than adding an if to every single debug output?
 //		maybe do it compacktly with that ? operator thing
 
@@ -120,6 +118,13 @@ int main()
 			{
 				fprintf(pDUMP,"<15?%0.2X>",cur);
 			}
+		}
+		//without it the chars/camera wont't get in formation???
+		//seen at start of shops???
+		else if(cur == 0x24)
+		{
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,"<FORM?%0.2X>",cur);
 		}
 		//textbox transition
 		else if(cur == 0x28)
