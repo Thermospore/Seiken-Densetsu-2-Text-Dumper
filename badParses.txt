@@ -116,3 +116,10 @@ there was a bit of a pause there
 　このさいだんの下に封じてある。<PAUSE><WRAP>
 「フッ、おとなしく帝国にこうふく<WRAP>
 wierdness. I think the <プリム> is preventing wrap, since it's a debug output not a gPrint output
+・・・・・・・・・・・・・・・・・
+に<REF?30>）<REF?50>「‥なんだ、客か。<NL:092A3B>
+　めんどうなモンは　おいてないぞ<FORM?80><SBOX><$><WRAP>
+　（<SEL><SCOL3>　かいにきた<SCOL9>　うりにきた　）</SEL>
+<WRAP>
+ぱ<EOS:092A6B>
+Waaaaatf is going on here
