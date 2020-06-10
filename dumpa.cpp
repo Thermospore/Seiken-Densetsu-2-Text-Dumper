@@ -26,10 +26,28 @@ void gPrint(char* moji, FILE* pDUMP, int &col)
 	col++; //advance column
 	if (col == 16) //wrap column
 	{
-		fprintf(pDUMP,"<WRAP>\n");
+		fprintf(pDUMP,"<CWRAP>\n");
 		col = 0;
 	}
 	fprintf(pDUMP,"%s",moji); //print char
+	return;
+}
+
+//Handles in game NewLines
+void gNL(FILE* pDUMP, int &col, int &row)
+{
+	col = -1;
+	if(row == 2)
+	{
+		//wraps to new textbox after the third row
+		fprintf(pDUMP,"\n<RWRAP>\n");
+		row = 0;
+	}
+	else
+	{
+		fprintf(pDUMP,"\n");
+		row++;
+	}
 	return;
 }
 
@@ -67,9 +85,10 @@ int main()
 {
 	unsigned char cur = 0x00; //contents of current byte of the ROM
 	char* moji = "–³"; //moji to print
-	int addr = -1; //current address in the ROM
-	int col = -1; //current column of text
-
+	int addr = -1; //address in ROM of `cur`
+	int col = -1; //column the most recently printed charachchtter is in
+	int row = 0; //current row of text you are printing on now
+	
 	//remove old dump
 	remove("dump.txt");
 		
