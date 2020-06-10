@@ -9,7 +9,7 @@
 //		maybe easiest to do in post processing, rather than adding an if to every single debug output?
 //			separate script to strip out all other <*>s (besides the above)
 //			remove any consecutive NLs
-//		maybe only show "sandwich"ing codes like open, close, and ret?
+//		maybe only show "sandwich"ing codes like open, close, eos, and ret?
 //		maybe a separate script to strip out all other <*>s (besides the above)
 
 //advances to next byte
@@ -134,7 +134,7 @@ int main()
 			advance(cur,pROM,addr);
 			if(cur == 0xFF)
 			{
-				fprintf(pDUMP,"\n<RET>",cur);
+				fprintf(pDUMP,"\n<RET:%0.6X>",addr);
 			}
 			else
 			{

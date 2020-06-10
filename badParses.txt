@@ -123,3 +123,9 @@ wierdness. I think the <プリム> is preventing wrap, since it's a debug output
 <WRAP>
 ぱ<EOS:092A6B>
 Waaaaatf is going on here
+・・・・・・・・・・・・・・・・・・・・・・・・・
+<34?6C>Ｊ長「‥<WAIT08>ざんねんだが、しかたない<MVE08><CWRAP>
+　<ランディ>よ。この村から<NL:093E97>
+　出て行ってもらう事にするよ。<PAUSE><NL:093EAC>
+<RWRAP>
+Fix me
