@@ -1,2 +1,2 @@
-２４　８０　Shop Start?
-5D	5F　Shop start?
+24
+	80　shop start?

@@ -8,6 +8,7 @@
 //in dump, don't base box spacing on <pause>. maybe count rows->3 or something?
 //		make a function specifically for handling in game NLs, and have it keep track of rows?
 //		and any debug NLs should be purely on top of that
+//		gNL; CWRAP and RWRAP?
 //option to A) show exactly like game or B) show special codes too (debug output)
 //		maybe can pick between the types. ie textbox start/end, line end, and internal effects
 //		easiest to do in post processing, rather than adding an if to every single debug output?
@@ -93,14 +94,7 @@ int main()
 		else if(cur == 0x02)
 		{
 			advance(cur,pROM,addr);
-			if(cur == 0x00)
-			{
-				fprintf(pDUMP,"<$>");
-			}
-			else
-			{
-				fprintf(pDUMP,"<02?%0.2X>",cur);
-			}
+			fprintf(pDUMP,"<REF?%0.2X>",cur);
 		}
 		//text stutter
 		else if(cur == 0x08)
@@ -250,6 +244,16 @@ int main()
 		else if(cur == 0x5B)
 		{
 			fprintf(pDUMP,"</SEL>\n\n");
+		}
+		//bring up subtextbox (IE to display your money in a shop)
+		else if(cur == 0x5D)
+		{
+			fprintf(pDUMP,"<SBOX>");
+		}
+		//show current $  in subtextbox
+		else if(cur == 0x5F)
+		{
+			fprintf(pDUMP,"<$>");
 		}
 		//newline
 		else if(cur == 0x7F)
