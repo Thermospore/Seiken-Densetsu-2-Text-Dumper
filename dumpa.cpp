@@ -234,20 +234,27 @@ int main()
 		else if(cur == 0x57)
 		{
 			advance(cur,pROM,addr);
+			
 			if(cur == 0x00)
 			{
-				fprintf(pDUMP,"<ランディ>");
-				col += 4;
+				//a little funky, I know, but it was the easiest
+				//way to prevent wrapping issues
+				gPrint("<ランディ>",pDUMP,col,row);
+				col+=3;
 			} 
 			else if(cur == 0x01)
 			{
-				fprintf(pDUMP,"<プリム>");
-				col += 3;
+				gPrint("<プリム>",pDUMP,col,row);
+				col+=2;
 			}
 			else if(cur == 0x02)
 			{
-				fprintf(pDUMP,"<ポポイ>");
-				col += 3;
+				gPrint("<ポポイ>",pDUMP,col,row);
+				col+=2;
+			}
+			else
+			{
+				fprintf(pDUMP,"<NAME%0.2X>",cur);
 			}
 		}
 		//initialize a selection list?
