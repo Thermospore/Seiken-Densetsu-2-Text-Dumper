@@ -1,4 +1,5 @@
 #include<stdio.h>
+#define DEBUG true
 
 //TO-DO:
 //goal: match appearance of in game textbox (bar debug output)
@@ -27,7 +28,7 @@ void gNL(FILE* pDUMP, int &col, int &row)
 	if(row == 2)
 	{
 		//wraps to new textbox after the third row
-		fprintf(pDUMP,"\n<RWRAP>\n");
+		fprintf(pDUMP,DEBUG ? "\n<RWRAP>\n" : "\n\n");
 		row = 0;
 	}
 	else
@@ -44,7 +45,7 @@ void gPrint(char* moji, FILE* pDUMP, int &col, int &row)
 	//wrap column
 	if (col == 15)
 	{
-		fprintf(pDUMP,"<CWRAP>");
+		fprintf(pDUMP,DEBUG ? "<CWRAP>" : "");
 		gNL(pDUMP,col,row);
 	}
 	
@@ -119,13 +120,13 @@ int main()
 		//text stutter
 		else if(cur == 0x08)
 		{
-			fprintf(pDUMP,"<...>");
+			fprintf(pDUMP,DEBUG ? "<...>" : "");
 		}
 		//Unknown. Related to attack moves/rendering?
 		//Actually, maybe to y/n selections?
 		else if(cur == 0x05 || cur == 0x09)
 		{
-			fprintf(pDUMP,"<%0.2X?>",cur);
+			fprintf(pDUMP,DEBUG ? "<%0.2X?>" : "",cur);
 		}
 		//Pause at end of dialogue, close window after a button press,
 		//then restore control to charachchther
@@ -148,7 +149,7 @@ int main()
 		else if(cur == 0x24)
 		{
 			advance(cur,pROM,addr);
-			fprintf(pDUMP,"<FORM?%0.2X>",cur);
+			fprintf(pDUMP,DEBUG ? "<FORM?%0.2X>" : "",cur);
 		}
 		//pauses
 		else if(cur == 0x28)
@@ -157,19 +158,19 @@ int main()
 			//wait for button press
 			if (cur == 0x00)
 			{
-				fprintf(pDUMP,"<PAUSE>");
+				fprintf(pDUMP,DEBUG ? "<PAUSE>" : "");
 			}
 			//wait for an amount of time
 			else
 			{
-				fprintf(pDUMP,"<WAIT%0.2X>",cur);
+				fprintf(pDUMP,DEBUG ? "<WAIT%0.2X>" : "",cur);
 			}
 		}
 		//unknown
 		else if(cur == 0x30)
 		{
 			advance(cur,pROM,addr);
-			fprintf(pDUMP,"<30?%0.2X>",cur);
+			fprintf(pDUMP,DEBUG ? "<30?%0.2X>" : "",cur);
 			advance(cur,pROM,addr);//dump control
 		}
 		//unknown. attack?
@@ -180,18 +181,18 @@ int main()
 			{
 				//dump control
 				advance(cur,pROM,addr);
-				fprintf(pDUMP,"<ATK>",cur);
+				fprintf(pDUMP,DEBUG ? "<ATK>" : "",cur);
 			}
 			else
 			{
-				fprintf(pDUMP,"<31?%0.2X>",cur);	
+				fprintf(pDUMP,DEBUG ? "<31?%0.2X>" : "",cur);	
 			}				
 		}
 		//characchehter movement
 		else if(cur == 0x32)
 		{
 			advance(cur,pROM,addr);
-			fprintf(pDUMP,"<MVE%0.2X>",cur);
+			fprintf(pDUMP,DEBUG ? "<MVE%0.2X>" : "",cur);
 			advance(cur,pROM,addr);//dump movement control
 		}
 		//chahrahrer action?
@@ -202,11 +203,11 @@ int main()
 			{
 				//dump action control
 				advance(cur,pROM,addr);
-				fprintf(pDUMP,"<ACT>");
+				fprintf(pDUMP,DEBUG ? "<ACT>" : "");
 			}
 			else
 			{
-				fprintf(pDUMP,"<34?%0.2X>",cur);
+				fprintf(pDUMP,DEBUG ? "<34?%0.2X>" : "",cur);
 			}
 		}
 		//textbox open
@@ -226,7 +227,7 @@ int main()
 		//textbox clear
 		else if(cur == 0x52)
 		{
-			fprintf(pDUMP,"\n<CLEAR:%0.6X>\n",addr);
+			fprintf(pDUMP,DEBUG ? "\n<CLEAR:%0.6X>\n" : "\n\n",addr);
 			col = -1;
 			row = 0;
 		}
@@ -260,14 +261,14 @@ int main()
 		//initialize a selection list?
 		else if(cur == 0x58)
 		{
-			fprintf(pDUMP,"<SEL>");
+			fprintf(pDUMP,DEBUG ? "<SEL>" : "");
 		}
 		//set current column
 		//(this is independent of selection lists)
 		else if(cur == 0x59)
 		{
 			advance(cur,pROM,addr);
-			fprintf(pDUMP,"<COL%X>",cur);
+			fprintf(pDUMP,DEBUG ? "<COL%X>" : "",cur);
 			
 			setCol(cur,pDUMP,col,row);			
 		}
@@ -275,29 +276,29 @@ int main()
 		else if(cur == 0x5A)
 		{
 			advance(cur,pROM,addr);
-			fprintf(pDUMP,"<SCOL%X>",cur);
+			fprintf(pDUMP,DEBUG ? "<SCOL%X>" : "",cur);
 			
 			setCol(cur,pDUMP,col,row);	
 		}
 		//finalize a selection list?
 		else if(cur == 0x5B)
 		{
-			fprintf(pDUMP,"</SEL>\n");
+			fprintf(pDUMP,DEBUG ? "</SEL>\n" : "\n");
 		}
 		//bring up subtextbox (IE to display your money in a shop)
 		else if(cur == 0x5D)
 		{
-			fprintf(pDUMP,"<SBOX>");
+			fprintf(pDUMP,DEBUG ? "<SBOX>" : "");
 		}
 		//show current $  in subtextbox
 		else if(cur == 0x5F)
 		{
-			fprintf(pDUMP,"<$>");
+			fprintf(pDUMP,DEBUG ? "<$>" : "");
 		}
 		//newline
 		else if(cur == 0x7F)
 		{
-			fprintf(pDUMP,"<NL:%0.6X>",addr);
+			fprintf(pDUMP,DEBUG ? "<NL:%0.6X>" : "",addr);
 			gNL(pDUMP,col,row);
 		}
 		//no shift
