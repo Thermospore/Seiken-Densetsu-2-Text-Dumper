@@ -5,13 +5,6 @@
 //goal: match appearance of in game textbox (bar debug output)
 //check rest of stuff in badParses
 //fix string coding stuff, so it doesn't take forever to compile...
-//option to A) show exactly like game or B) show special codes too (debug output)
-//		maybe do it compacktly with that ? operator thing
-//		maybe easiest to do in post processing, rather than adding an if to every single debug output?
-//			separate script to strip out all other <*>s (besides the above)
-//			remove any consecutive NLs
-//		maybe only show "sandwich"ing codes like open, close, eos, and ret?
-//		maybe a separate script to strip out all other <*>s (besides the above)
 
 //advances to next byte
 void advance(unsigned char &cur, FILE* pROM, int &addr)
