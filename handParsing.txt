@@ -1,32 +1,29 @@
 ・・・・・・・・・・・・・聖剣 cutscene//////////////////////////////
 10	51	21	2D	32	00	00	50	88	CB	B3	83	28	0C	32	00
-							OPN	『	だ	れ	？	Wait	Move
+	CLZ	<------>			OPN	『	だ	れ	？	Wait	Move
 
 40	85	9E	B6	CB	80	93	A2	FC	A3	82	83	28	18	51	27
-	‥	な	ん	だ	、	こ	の	剣	は	！	？	Wait	Close
-															？？
+	‥	な	ん	だ	、	こ	の	剣	は	！	？	Wait	CLZ	＜ーー
 
 48	2D	08	39	00	90	01	31	00	AD	50	88	B6	F7	F7	F7
-										OPN	『	ん	～	～	～
+ーー＞＜ーーーー＞＜-------------＞＜---------＞OPN	『	ん	～	～	～
 Camera moves to center
 He starts pulling the sword
 Music fades Out
 
 85	28	10	29	10	09	29	00	39	00	90	00	8D	8B	B8	82
-‥	Wait										え	い	っ	！
-			＜ーーーー＞？	＜ーーーー＞
+‥	Wait	＜ーーーー＞？	＜ーーーー＞＜-------------＞え	い	っ	！
 			Sword comes out
 			He starts falling back
+			SFX
 
 28	04	51	39	00	90	01	2D	06	FF	43	50	88	8C	B8	82
-Wait	CLS									OPN	『	う	っ	！
-			？？？？
+Wait	CLZ	＜-------------＞＜ーーーー＞＜?????＞OPN	『	う	っ	！
 			He falls all the way back
 			Screen fades to white
 
 A8	D2	95	8B	82	28	20	29	0A	09	2D	07	28	04	7F	FF
-ま	ぶ	し	い	！	Wait								NL	　
-							＜ーーーー＞？
+ま	ぶ	し	い	！	Wait	＜ーーーー＞？	＜ーーーー＞WAIT	NL	　	
 							Screen fades to yellow
 
 B5	B5	80	8E	80	8E	D0	92	82	82	28	10	52	86	85	28
@@ -39,32 +36,41 @@ FF	FC	B7	85	28	02	99	A2	B6	CB	CA	28	02	85	28	02
 　	剣	を	‥	WAIT	た	の	ん	だ	ぞ	WAIT	‥	WAIT
 
 85	28	10	52	2D	06	FF	43	88	82	83	28	20	2A	0A	09
-‥	Wait	CLR					『	！	？	Wait	
-				？？？？								？？？
+‥	Wait	CLR	＜ーーーー＞＜?????＞『	！	？	Wait	<------>?
 				FADE TO WHITE
 
 2D	07	28	04	7F	FF	9E	80	9E	B6	CB	80	9E	B6	CB	83
-				NL	　	な	、	な	ん	だ	、	な	ん	だ	？
-？？？
+＜ーーーー＞Wait	NL	　	な	、	な	ん	だ	、	な	ん	だ	？
 FADE TO YELLOW
 
 28	10	7F	FF	8A	B8	82	92	80	FC	C1	B8	82	82	39	00
-Wait	NL	　	あ	っ	！	け	、	剣	が	っ	！	！	
-														？？？
+Wait	NL	　	あ	っ	！	け	、	剣	が	っ	！	！	<------
 
 90	00	2D	06	FF	43	28	08	51	40	01	18	04	FF	29	00
-								CLOSE						＜ーーーー＞
+------->＜ーーーー＞＜?????＞Wait	CLZ						＜ーーーー＞
+Sword points down (same form as when falling back)、
+Sword over head、
+Fade to 50% white
 
 2D	07	27	49	50	27	3D	40	01	1C	8A	0F	88	CF	B6	CF
-				OPN								『	ど	ん	ど
+＜ーーーー＞＜ーーーー＞OPN	＜ーーーー＞					『	ど	ん	ど
+Water darker blue、Sparkels	white starts to finish fadeout
+Blue oval goes out, SFX		he lowers the sword from above head
+Complete fade to white		gets into fighting position
+White back to 50%			music returns
+oval rescinds				
+sparkles end				
+water color restored		
+action bar appears			
+
 
 B6	68	88	C1	68	89	8D	9C	8B	91	85	28	10	51	20	5F
-ん	ｓ２ｘ１	光	が	ｓ２ｘ１	消	え	て	い	く	‥	WAIT	CLOSE
-														？？
+ん	ｓ２ｘ１	光	が	ｓ２ｘ１	消	え	て	い	く	‥	WAIT	CLZ	＜ーーーー＞
+														He looks left
+														and right
 
 50	88	85	AA	80	6C	E3	9F	FF	8F	8D	B4	82	29	C1	15
-OPN	『	‥	む	、	ｓ３ｘ１	村	に	　	か	え	ろ	！			RET
-													＜ーーーー＞
+OPN	『	‥	む	、	ｓ３ｘ１	村	に	　	か	え	ろ	！	＜ーーーー＞RET
 
 ・・・・・・・・Talking to a person・・・・・・・・・
 62	C4	B8	D7	82	AC	8C	80	A2	AB	9E	8B	AF	82	15	FF	00

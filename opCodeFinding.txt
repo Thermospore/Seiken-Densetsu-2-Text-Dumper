@@ -1,11 +1,37 @@
-２０ー＞５F？
+He looks left and right with 5F
+２０
+	_
 
+Something to do with cutscenes
 ２７
+	_
 
 ２９
+	_
 
 ２A
+	_
 
+something to do with screen fades
 ２D
+	08
+	06
+		FF  Or is 43 its own thing??? look into this
+			43
+	07
 
+something to do with holy sword movement?
 ３９
+	00
+		90	Maybe test this out before committing...
+			_
+
+40  or are 40 and 1 separate??
+	1
+		_
+			_
+				_
+
+Try having the program flag whenever the parent code
+comes up so you can go investigate the structure
+Check 40,1,39,2d,2d06,43
