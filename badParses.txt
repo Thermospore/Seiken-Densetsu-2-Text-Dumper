@@ -147,3 +147,38 @@ Different lines for different locs from the cannon dude. They all just reference
 　さあ、大砲にはいっとくれ！
 <CLOSE:09308C>
 ///////////////////////////
+<OPEN:097CC0>
+ニキータ「ニャハ、つかまっちゃい<CWRAP>
+　ましたよ。ところで、たすけて<NL:097CE3>
+　もらっといてニャんですけど‥Ｆ<EOS:097CF6>
+
+<PAUSE><NL:097CF9>
+<FORM?80><SBOX><$>「とくべつしゅっちょうサービス！<CWRAP>
+　セーブもするよ。にゃひひひ！<NL:097D21>
+<RWRAP>
+　（<SEL><SCOL3>　セーブ<SCOL7>　かう<SCOLA>　うる　）</SEL>
+　<EOS:097D3F>
+Random F
+・・・・・・・・・・・・・・・・・・
+<OPEN:09756B>
+「ラビと男で　ラビ男～っ！<WAIT08><NL:09757F>
+し<34?01>む<34?02>む<...>　え？バカにすんな？さすが<CWRAP>
+は<NL:097598>
+<RWRAP>
+　お客さん。お目がこえてる！<PAUSE><NL:0975AB>
+<34?01>、<34?02>、<...>「それでは　ショウシンショウ<CWRAP>
+メイ　なんとも　めずらしい<NL:0975D0>
+<RWRAP>
+　妖精の子供だあ！<PAUSE>
+<CLOSE:0975DF>
+Dis all messed up (ポポイ cutscene)
+・・・・・・・・・・・・・・・
+<OPEN:096AA6>
+「ホレ！きたえなおしたよ！
+　こんな　名刀見たことねえや！
+　サビつかせとくのはもったいねえ
+
+、、「みてるだけで　ウズウズする
+ぜ！　いつかは　オレも　そんな剣
+を
+Messsed
