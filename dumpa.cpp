@@ -144,6 +144,12 @@ int main()
 			advance(cur,pROM,addr);
 			fprintf(pDUMP,DEBUG ? "<FORM?%0.2X>" : "",cur);
 		}
+		//related to audio?
+		else if(cur == 0x27)
+		{
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "<AUDIO?%0.2X>" : "",cur);
+		}
 		//pauses
 		else if(cur == 0x28)
 		{
