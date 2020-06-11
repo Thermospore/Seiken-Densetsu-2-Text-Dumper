@@ -137,6 +137,20 @@ int main()
 			col = -1;
 			row = 0;
 		}
+		//ehhh idunno
+		else if(cur == 0x20)
+		{
+			advance(cur,pROM,addr);
+			//this makes him do a head shake tho
+			if (cur == 0x5F)
+			{
+				fprintf(pDUMP,DEBUG ? "<HEADSHAKE>" : "");
+			}
+			else
+			{
+				fprintf(pDUMP,DEBUG ? "<20?%0.2X>" : "",cur);
+			}
+		}
 		//without it the chars/camera wont't get in formation???
 		//seen at start of shops???
 		else if(cur == 0x24)
@@ -163,6 +177,38 @@ int main()
 			else
 			{
 				fprintf(pDUMP,DEBUG ? "<WAIT%0.2X>" : "",cur);
+			}
+		}
+		//i aint got no clue
+		else if(cur == 0x29)
+		{
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "<29?%0.2X>" : "",cur);
+		}
+		//again, no clue
+		else if(cur == 0x2A)
+		{
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "<2A?%0.2X>" : "",cur);
+		}
+		//Something to to with screen fades? ie to white, to yellow, etc
+		else if(cur == 0x2D)
+		{
+			advance(cur,pROM,addr);
+			// 0x06 seems like a special case
+			if(cur == 0x06)
+			{
+				fprintf(pDUMP,DEBUG ? "<FADE06?" : "",cur);
+				
+				//dump next two bytes
+				advance(cur,pROM,addr);
+				fprintf(pDUMP,DEBUG ? "%0.2X" : "",cur);
+				advance(cur,pROM,addr);
+				fprintf(pDUMP,DEBUG ? "%0.2X>" : "",cur);
+			}
+			else
+			{
+				fprintf(pDUMP,DEBUG ? "<FADE?%0.2X>" : "",cur);
 			}
 		}
 		//unknown
