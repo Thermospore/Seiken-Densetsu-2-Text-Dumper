@@ -1,106 +1,14 @@
-『だれ？<EOS>
-
-<093201>
-‥なんだ、この剣は！？<EOS>
-
-<093215>
-き<EOS>
-
-<093219>
-や『ん～～～‥<EOS>
-
-<09322A>
-き<EOS>
-
-<09322C>
-えいっ！<EOS>
-
-<093235>
-き　『うっ！まぶしい！<NL>
-　わわ、お、おばけ！！「‥‥<ランディ>よ‥‥<NL>
-　剣を‥たのんだぞ‥‥　『！？<NL>
-　な、なんだ、なんだ？<NL>
-　あっ！け、剣がっ！！<EOS>
-MISSING NLS
-<0932B0>
-き<EOS>
-
-<0932B4>
-　　<EOS>
-
-<0932CA>
-あ『どんどん光が消えていく‥『‥<WRAP>
-む、村に　かえろ！が　<EOS>
-WAIT．
-MISSING NL AT　『‥む、村に
-・・・・・・
-<0941F8>
-『剣で　きれそうだぞ　<EOS>
-WAIT
-・・・・・・
-<09332F>
-『うわっ　こんなところにラビが！<WRAP>
-　や、やばいぞ！<EOS>
-WAIT
-・・・・・・
-....................
-<OPEN:0x0935C5>
-まあ、<ランディ>！そんな剣<NL:0x0935D0>
-ふりまわしてると　あぶないわよ！<WRAP>
-村長さんに、いいつけますよ！　<EOS:0x0935F3>
-むぇ
-MUE??
-。。。。。。。。。。
-<OPEN:0x0939D2>
-ボブ「うわ！ば、ばけものだあ！！<WRAP>
-げ<...>　お、おまえ剣もってんだろ！<NL:0x0939F7>
-　なんとかしろよ！！<PAUSE>
-GE SHOULDN"T BE THERE. THERE WAS A LONG PAUSE THERE
-・・・・・・・・・・・・・・・・
-村長「‥‥<WAIT:0x10>おお、<ランディ>！<NL:0x093D73>
-<MVE04><MVE05><MVE06><32?07><...><WAIT:0x08><MVE00><...><MVE00><MVE04><MVE05><32?07>ぉ<...><MVE00><32?08>ぉ<...>　こまった事をしてくれた。<NL:0x093DAA>
-　その聖剣はこの村の守り神、<PAUSE>
-Fix o’ｓ
-・・・・・・・・・・・・・・・
 つぐ<NL:094F18>
 　ブロンズランスを手にいれた！　<WAIT10><PAUSE>
 Wierd stuff here. Recieving an item
 ・・・・・・・・・・・・・・・
-<OPEN:094581>
-「バッカねー。なにやってんの！？<PAUSE>
-
-『たすけてくれよう！<NL:09459F>
-「シッ！しずかに！<PAUSE>
-This confirms pauses aren't inherently NLｓ．Should fix this
-・・・・・・・・・・・・・・・
-<OPEN:0952C2>
-「ここは　パンドーラ王国の<NL:0952D4>
-　城下町だ。か<STOP>きみがきたら通すよ<WRAP>
-う　ジェマ殿から聞いておる。<PAUSE>
-Uhhhh where is that STOP from lol
-there was a bit of a pause there
-////////////////
-<OPEN:09598D>
-タナトス「わるいな、すでに生気を<WRAP>
-　ぬかせてもらったよ。その娘は<NL:0959B1>
-　もう私のちゅうじつなしもべさ。<PAUSE><プリム>『なんてことを！<NL:0959CF>
-タナトス「すいとった人々の生気は<WRAP>
-　このさいだんの下に封じてある。<PAUSE><WRAP>
-「フッ、おとなしく帝国にこうふく<WRAP>
-wierdness. I think the <プリム> is preventing wrap, since it's a debug output not a gPrint output
-・・・・・・・・・・・・・・・・・
 に<REF?30>）<REF?50>「‥なんだ、客か。<NL:092A3B>
 　めんどうなモンは　おいてないぞ<FORM?80><SBOX><$><WRAP>
 　（<SEL><SCOL3>　かいにきた<SCOL9>　うりにきた　）</SEL>
 <WRAP>
 ぱ<EOS:092A6B>
 Waaaaatf is going on here
-・・・・・・・・・・・・・・・・・・・・・・・・・
-<34?6C>Ｊ長「‥<WAIT08>ざんねんだが、しかたない<MVE08><CWRAP>
-　<ランディ>よ。この村から<NL:093E97>
-　出て行ってもらう事にするよ。<PAUSE><NL:093EAC>
-<RWRAP>
-Fix me
+the options should be on the next page
 ・・・・・・・・・・・・・・・・・・・・・・・・・・・・・
 <ポポイ>『ネエちゃん！<NL:098440>
 <34?03>ふ<...>　オイラがついてる！大船にのっ<CWRAP>
@@ -117,13 +25,6 @@ Fix me too
 ういい！　）
 <EOS:092ADC>
 Missing NL
-・・・・・・・・・・・・・・・・・・・・
-<OPEN:098E66>
-かむすこのディラックは　いそがし<CWRAP>
-いとかで　ちっともかえってこない<CWRAP>
-。こんなに近いのにのお‥‥
-<RET:098E9B><EOS:098E9C>
-か？？？
 ・・・・・・・・・・・・・・・・・・・・・
 <OPEN:092EB9>
 「氷の国！いってらっしゃい！<NL:092ECA>

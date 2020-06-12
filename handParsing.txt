@@ -1,3 +1,13 @@
+//////////////random messed up thing///////////////
+85	28	00	52	00	30	2E	02	02	00	50	42	5B	1F	14	40
+‥	PAUSE	CLR	EOS	WTVRTHISIS	Ref?	OPEN
+
+29	5B	88	61	B2	8F	94	A8	82	CB	8B	C7	BB	8C	D2	82
+<----->	『	ｓ１ｘ２	ル	カ	さ	ま	！	だ	い	じ	ょ	う	ぶ	！
+
+83	7F	61	B2	8F	86	60	8C	84	60	AA	80	8D	B0	8B	AB
+？	NL	ｓ１ｘ２	ル	カ	「	ｓ１ｘ１	ウ	ー	ｓ１ｘ１	ム	、	え	ら	い	め
+
 /////////////////some cutscene with ruka/////////////
 C1	7F	FF	68	D1	B8	9C	8B	B2	AF	8C	C7	B9	81	7F	FF
 が	NL	　	ｓ２ｘ１	弱	っ	て	い	る	よ	う	じ	ゃ	。	NL	 
@@ -7,13 +17,16 @@ C1	7F	FF	68	D1	B8	9C	8B	B2	AF	8C	C7	B9	81	7F	FF
 														？？？？
 
 2F	11	39	50	61	B2	8F	86	6C	B5	68	E4	9F	98	B8	9C
-				ｓ１ｘ２	ル	カ	「	ｓ３ｘ１	神	ｓ２ｘ１	殿	に	そ	っ	て
+			OPN	ｓ１ｘ２	ル	カ	「	ｓ３ｘ１	神	ｓ２ｘ１	殿	に	そ	っ	て
 ？？？？？？？
 
 FF	68	8F	9F	68	AB	B8	99	7F	FF	68	F8	A2	61	8C	B0
 　	ｓ２ｘ１	東	に	ｓ２ｘ１	行	っ	た	NL
 
 ・・・・・・・・・・・・・聖剣 cutscene//////////////////////////////
+85	FF	FC	B7	85	6C	E1	91	A2	CB	85	28	04	2D	07	28
+‥	　	剣	を	‥		抜	く	の	だ	‥	Wait	FADE	
+
 10	51	21	2D	32	00	00	50	88	CB	B3	83	28	0C	32	00
 	CLZ	<------>MOVE		OPN	『	だ	れ	？	Wait	Move
 

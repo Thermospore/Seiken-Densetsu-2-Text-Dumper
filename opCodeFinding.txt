@@ -1,9 +1,0 @@
-40  or are 40 and 1 separate??
-	1
-		_
-			_
-				_
-
-Try having the program flag whenever the parent code
-comes up so you can go investigate the structure
-Check 40,1,39,2d,2d06,43

@@ -5,7 +5,6 @@
 //goal: match appearance of in game textbox (bar debug output)
 //check rest of stuff in badParses
 //fix string coding stuff, so it doesn't take forever to compile...
-//replace : with @ on all addresses
 
 //advances to next byte
 void advance(unsigned char &cur, FILE* pROM, int &addr)
@@ -138,7 +137,7 @@ int main()
 			col = -1;
 			row = 0;
 		}
-		//ehhh idunno
+		//ehhh idunno. Movement related?
 		else if(cur == 0x20)
 		{
 			advance(cur,pROM,addr);
@@ -150,6 +149,20 @@ int main()
 			else
 			{
 				fprintf(pDUMP,DEBUG ? "<20?%0.2X>" : "",cur);
+			}
+		}
+		//more movement related stuff?
+		else if(cur == 0x21)
+		{
+			advance(cur,pROM,addr);
+			//this makes him turn left and right to look around
+			if (cur == 0x2D)
+			{
+				fprintf(pDUMP,DEBUG ? "<LOOKAROUND>" : "");
+			}
+			else
+			{
+				fprintf(pDUMP,DEBUG ? "<21?%0.2X>" : "",cur);
 			}
 		}
 		//without it the chars/camera wont't get in formation???
@@ -276,6 +289,30 @@ int main()
 			{
 				fprintf(pDUMP,DEBUG ? "<ITEM?%0.2X>" : "",cur);
 			}
+		}
+		//fancy cutscene stuff?
+		else if(cur == 0x40)
+		{
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "<FX?%0.2X?" : "",cur);
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "%0.2X" : "",cur);
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "%0.2X" : "",cur);
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "%0.2X>" : "",cur);
+		}
+		//more cutscene stuff??
+		else if(cur == 0x42)
+		{
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "<42?%0.2X" : "",cur);
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "%0.2X" : "",cur);
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "%0.2X" : "",cur);
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "%0.2X>" : "",cur);
 		}
 		//textbox open
 		else if(cur == 0x50)
