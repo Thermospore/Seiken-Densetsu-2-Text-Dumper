@@ -101,7 +101,7 @@ int main()
 		//end of string
 		if(cur == 0x00)
 		{
-			fprintf(pDUMP,"<EOS:%0.6X>\n\n",addr);
+			fprintf(pDUMP,"<EOS@%0.6X>\n\n",addr);
 			col = -1;
 			row = 0;
 		}
@@ -129,7 +129,7 @@ int main()
 			advance(cur,pROM,addr);
 			if(cur == 0xFF)
 			{
-				fprintf(pDUMP,"\n<RET:%0.6X>",addr);
+				fprintf(pDUMP,"\n<RET@%0.6X>",addr);
 			}
 			else
 			{
@@ -280,21 +280,21 @@ int main()
 		//textbox open
 		else if(cur == 0x50)
 		{
-			fprintf(pDUMP,"\n\n<OPEN:%0.6X>\n",addr);
+			fprintf(pDUMP,"\n\n<OPEN@%0.6X>\n",addr);
 			col = -1;
 			row = 0;
 		}
 		//textbox close
 		else if(cur == 0x51)
 		{
-			fprintf(pDUMP,"\n<CLOSE:%0.6X>\n\n",addr);
+			fprintf(pDUMP,"\n<CLOSE@%0.6X>\n\n",addr);
 			col = -1;
 			row = 0;
 		}
 		//textbox clear
 		else if(cur == 0x52)
 		{
-			fprintf(pDUMP,DEBUG ? "\n<CLEAR:%0.6X>\n" : "\n\n",addr);
+			fprintf(pDUMP,DEBUG ? "\n<CLEAR@%0.6X>\n" : "\n\n",addr);
 			col = -1;
 			row = 0;
 		}
@@ -365,7 +365,7 @@ int main()
 		//newline
 		else if(cur == 0x7F)
 		{
-			fprintf(pDUMP,DEBUG ? "<NL:%0.6X>" : "",addr);
+			fprintf(pDUMP,DEBUG ? "<NL@%0.6X>" : "",addr);
 			gNL(pDUMP,col,row);
 		}
 		//no shift
