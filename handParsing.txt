@@ -6,19 +6,19 @@
 	‥	な	ん	だ	、	こ	の	剣	は	！	？	Wait	CLZ	Audio
 
 48	2D	08	39	00	90	01	31	00	AD	50	88	B6	F7	F7	F7
-	FADE	＜-------------＞Stuff		OPN	『	ん	～	～	～
+	FADE	item mvmnt?		Stuff		OPN	『	ん	～	～	～
 Camera moves to center
 He starts pulling the sword
 Music fades Out
 
 85	28	10	29	10	09	29	00	39	00	90	00	8D	8B	B8	82
-‥	Wait	whocares？	whocares＜-------------＞え	い	っ	！
+‥	Wait	whocares？	whocaresitem mvmnt?		え	い	っ	！
 			Sword comes out
 			He starts falling back
 			SFX
 
 28	04	51	39	00	90	01	2D	06	FF	43	50	88	8C	B8	82
-Wait	CLZ	＜-------------＞FADE	＜?????＞OPN	『	う	っ	！
+Wait	CLZ	item mvmnt?		FADE	＜?????＞OPN	『	う	っ	！
 			He falls all the way back
 			Screen fades to white
 
@@ -44,7 +44,7 @@ fade	Wait	NL	　	な	、	な	ん	だ	、	な	ん	だ	？
 FADE TO YELLOW
 
 28	10	7F	FF	8A	B8	82	92	80	FC	C1	B8	82	82	39	00
-Wait	NL	　	あ	っ	！	け	、	剣	が	っ	！	！	<------
+Wait	NL	　	あ	っ	！	け	、	剣	が	っ	！	！	itemmvmnt?
 
 90	00	2D	06	FF	43	28	08	51	40	01	18	04	FF	29	00
 ------->fade	fadept2	Wait	CLZ						whocares

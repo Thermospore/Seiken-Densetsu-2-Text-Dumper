@@ -5,6 +5,7 @@
 //goal: match appearance of in game textbox (bar debug output)
 //check rest of stuff in badParses
 //fix string coding stuff, so it doesn't take forever to compile...
+//replace : with @ on all addresses
 
 //advances to next byte
 void advance(unsigned char &cur, FILE* pROM, int &addr)
@@ -253,6 +254,27 @@ int main()
 			else
 			{
 				fprintf(pDUMP,DEBUG ? "<34?%0.2X>" : "",cur);
+			}
+		}
+		//item movement?
+		else if(cur == 0x39)
+		{
+			advance(cur,pROM,addr);
+			//these seem to be special cases that take more parameters.
+			//actually it's possible all 0x39 take 3 params;
+			//maybe I was just seeing an incomplete command that looked like
+			//a 0x39 only taking 1 param... investigate later if it comes up
+			if(cur <= 0x04 || cur == 0x80)
+			{
+				fprintf(pDUMP,DEBUG ? "<ITEM%0.2X?" : "",cur);
+				advance(cur,pROM,addr);
+				fprintf(pDUMP,DEBUG ? "%0.2X" : "",cur);
+				advance(cur,pROM,addr);
+				fprintf(pDUMP,DEBUG ? "%0.2X>" : "",cur);
+			}
+			else
+			{
+				fprintf(pDUMP,DEBUG ? "<ITEM?%0.2X>" : "",cur);
 			}
 		}
 		//textbox open

@@ -1,9 +1,3 @@
-something to do with holy sword movement?
-３９
-	00
-		90	Maybe test this out before committing...
-			_
-
 40  or are 40 and 1 separate??
 	1
 		_
