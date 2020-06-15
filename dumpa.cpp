@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define DEBUG false
+#define DEBUG true
 
 //TO-DO:
 //goal: match appearance of in game textbox (bar debug output)
@@ -122,6 +122,12 @@ int main()
 		{
 			fprintf(pDUMP,DEBUG ? "<%0.2X?>" : "",cur);
 		}
+		//not sure. common after selection menus
+		else if(cur == 0x10)
+		{
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "<10?%0.2X>" : "",cur);
+		}
 		//Not sure. seems to be related to selection menus?
 		//also, it seems to cause text after it to be ignored until a certain point?
 		else if(cur == 0x11)
@@ -137,6 +143,12 @@ int main()
 		{
 			advance(cur,pROM,addr);
 			fprintf(pDUMP,DEBUG ? "<12?%0.2X>" : "",cur);
+		}
+		//not sure. common after selection menus
+		else if(cur == 0x13)
+		{
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "<13?%0.2X>" : "",cur);
 		}
 		//Pause at end of dialogue, close window after a button press,
 		//then restore control to charachchther
