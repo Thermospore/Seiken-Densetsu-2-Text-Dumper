@@ -123,6 +123,7 @@ int main()
 			fprintf(pDUMP,DEBUG ? "<%0.2X?>" : "",cur);
 		}
 		//Not sure. seems to be related to selection menus?
+		//also, it seems to cause text after it to be ignored until a certain point?
 		else if(cur == 0x11)
 		{
 			//assuming it has two parameters for now, but I might be wrong...
@@ -401,18 +402,21 @@ int main()
 		//bring up subtextbox (IE to display your money in a shop)
 		//note: technically, if you use this code your cursor will move to the start of
 		//the current textbox and any new text will overwrite the existing text.
-		//though, it seems like the devs always(?) move to a new box beforehand.
+		//though, it seems like the devs almost always (often redundantly?) move to a new box beforehand
+		//(and the almost-always-following 0x5F will clear the text regardless)
 		//this could be good to keep in mind if something wierd is going on 
 		else if(cur == 0x5D)
 		{
-			fprintf(pDUMP,DEBUG ? "<SBOX>" : "");
-			col = -1;
-			row = 0;
+			fprintf(pDUMP,DEBUG ? "\n<SBOX>" : "\n",addr);
 		}
 		//show current $  in subtextbox
+		//using this after 0x5D causes the current text in the textbox to be cleared
+		//<SBOX> and <$> are literally always in tandem, and together they effectively equate to a <CLEAR>
 		else if(cur == 0x5F)
 		{
-			fprintf(pDUMP,DEBUG ? "<$>" : "");
+			fprintf(pDUMP,DEBUG ? "<$@%0.6X>\n" : "\n",addr);
+			col = -1;
+			row = 0;
 		}
 		//newline
 		else if(cur == 0x7F)

@@ -1,21 +1,3 @@
-に<REF?30>）<REF?50>「‥なんだ、客か。<NL:092A3B>
-　めんどうなモンは　おいてないぞ<FORM?80><SBOX><$><WRAP>
-　（<SEL><SCOL3>　かいにきた<SCOL9>　うりにきた　）</SEL>
-<WRAP>
-ぱ<EOS:092A6B>
-Waaaaat is going on here
-the options should be on the next page
-・・・・・・・・・・・・・・・・・・・・・・・・・・・・・
-<OPEN:092A78>
-「‥とまんの？あいてるベッドで
-　かってに　ねろよ。
-　あ～　カッタルイ。「‥おっと、
-
-前金で　１０ルクだ。　（<COLNEG9>ちぇっ<COLNEG7>も
-ういい！　）
-<EOS:092ADC>
-Missing NL
-・・・・・・・・・・・・・・・・・・・・・
 <OPEN:092EB9>
 「氷の国！いってらっしゃい！<NL:092ECA>
 剣～<EOS:092ED3>
