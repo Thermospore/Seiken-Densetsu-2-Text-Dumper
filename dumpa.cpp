@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define DEBUG false
+#define DEBUG true
 
 //TO-DO:
 //goal: match appearance of in game textbox (bar debug output)
@@ -153,6 +153,12 @@ int main()
 		{
 			advance(cur,pROM,addr);
 			fprintf(pDUMP,DEBUG ? "<1E?%0.2X>" : "",cur);
+		}
+		//not sure. if you mess with it it will credits warp you lol
+		else if(cur == 0x1F)
+		{
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "<1F?%0.2X>" : "",cur);
 		}
 		//ehhh idunno. Movement related?
 		else if(cur == 0x20)
