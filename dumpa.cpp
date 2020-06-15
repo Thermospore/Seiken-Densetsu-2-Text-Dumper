@@ -118,7 +118,7 @@ int main()
 		}
 		//Unknown. Related to attack moves/rendering?
 		//Actually, maybe to y/n selections?
-		else if(cur == 0x05 || cur == 0x09)
+		else if(cur == 0x05 || cur == 0x06 || cur == 0x09)
 		{
 			fprintf(pDUMP,DEBUG ? "<%0.2X?>" : "",cur);
 		}
@@ -241,6 +241,12 @@ int main()
 			{
 				fprintf(pDUMP,DEBUG ? "<FADE?%0.2X>" : "",cur);
 			}
+		}
+		//Unknown
+		else if(cur== 0x2F)
+		{
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "<2F?%0.2X>" : "",cur);
 		}
 		//unknown
 		else if(cur == 0x30)
