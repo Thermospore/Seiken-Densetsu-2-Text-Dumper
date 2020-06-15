@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define DEBUG true
+#define DEBUG false
 
 //TO-DO:
 //goal: match appearance of in game textbox (bar debug output)
@@ -131,6 +131,12 @@ int main()
 			fprintf(pDUMP,DEBUG ? "<11?%0.2X" : "",cur);
 			advance(cur,pROM,addr);
 			fprintf(pDUMP,DEBUG ? "%0.2X>" : "",cur);
+		}
+		//not sure
+		else if(cur == 0x12)
+		{
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "<12?%0.2X>" : "",cur);
 		}
 		//Pause at end of dialogue, close window after a button press,
 		//then restore control to charachchther
@@ -324,6 +330,16 @@ int main()
 			fprintf(pDUMP,DEBUG ? "<42?%0.2X" : "",cur);
 			advance(cur,pROM,addr);
 			fprintf(pDUMP,DEBUG ? "%0.2X" : "",cur);
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "%0.2X" : "",cur);
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "%0.2X>" : "",cur);
+		}
+		//idk
+		else if(cur == 0x49)
+		{
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "<49?%0.2X" : "",cur);
 			advance(cur,pROM,addr);
 			fprintf(pDUMP,DEBUG ? "%0.2X" : "",cur);
 			advance(cur,pROM,addr);

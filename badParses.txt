@@ -19,16 +19,6 @@
 Different lines for different locs from the cannon dude. They all just reference to this afterwards:
 　さあ、大砲にはいっとくれ！
 <CLOSE:09308C>
-・・・・・・・・・・・・・・・・
-仲間の武器に<NL@0A6BF9>
-、水の能力をもたせる<EOS@0A6C06>
-Should be all one line(in stats screen)
-・・・・・・・・・・・・・・・・・・・
-<OPEN@099376>
-『ここが　さいだんのへやだな‥‥
-く、
-<CLOSE@09938F>
-fix me
 /////////////////////////////
 <OPEN@092A30>
 「‥なんだ、客か。
