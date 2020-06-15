@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define DEBUG false
+#define DEBUG true
 
 //TO-DO:
 //goal: match appearance of in game textbox (bar debug output)
@@ -120,6 +120,15 @@ int main()
 		else if(cur == 0x05 || cur == 0x09)
 		{
 			fprintf(pDUMP,DEBUG ? "<%0.2X?>" : "",cur);
+		}
+		//Not sure. seems to be related to selection menus?
+		else if(cur == 0x11)
+		{
+			//assuming it has two parameters for now, but I might be wrong...
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "<11?%0.2X" : "",cur);
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "%0.2X>" : "",cur);
 		}
 		//Pause at end of dialogue, close window after a button press,
 		//then restore control to charachchther
