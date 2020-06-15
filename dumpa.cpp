@@ -408,6 +408,14 @@ int main()
 		//newline
 		else if(cur == 0x7F)
 		{
+			//this is a workaround for a discrepancy between the way
+			//I handle line wrapping and the game handles line wrapping
+			if(col == 15)
+			{
+				fprintf(pDUMP,DEBUG ? "<CWRAPNL>" : "");
+				gNL(pDUMP,col,row);
+			}
+			
 			fprintf(pDUMP,DEBUG ? "<NL@%0.6X>" : "",addr);
 			gNL(pDUMP,col,row);
 		}
