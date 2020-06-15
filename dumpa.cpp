@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define DEBUG true
+#define DEBUG false
 
 //TO-DO:
 //goal: match appearance of in game textbox (bar debug output)

@@ -99,3 +99,12 @@ fix me
 They were fighting and there were
 flashes and stuff
 /////////////////////////////
+<OPEN@092A30>
+「‥なんだ、客か。
+　めんどうなモンは　おいてないぞ
+
+　（　かいにきた　うりにきた　）
+
+ぱ<EOS@092A6B>
+rando pa
+//////////////////////////////
