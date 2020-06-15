@@ -137,6 +137,12 @@ int main()
 			col = -1;
 			row = 0;
 		}
+		//no clue. found before recieving the bronze lance.
+		else if(cur == 0x1E)
+		{
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,"<1E?%0.2X>",cur);
+		}
 		//ehhh idunno. Movement related?
 		else if(cur == 0x20)
 		{
@@ -1347,6 +1353,11 @@ int main()
 				}
 				gPrint(moji,pDUMP,col,row);
 			}
+		}
+		else
+		{
+			//print any unknown bytes
+			fprintf(pDUMP,DEBUG ? "{%0.2X}" : "",cur);
 		}
 	}
 	

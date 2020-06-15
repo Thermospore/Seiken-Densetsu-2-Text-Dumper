@@ -1,3 +1,11 @@
+・・・・・・・・・・・・・・・・Getting bronze lance in water temple・・・・・・・・・・・
+92	81	28	00	1E	9B	29	C3	7F	FF	66	D2	B4	B6	C8	B0
+け	。	PAUSE			<----->	NL	　	ｓ１ｘ７	ブ	ロ	ン	ズ	ラ
+				<----->	
+
+B6	96	B7	60	F9	9F	8B	B3	99	82	40	01	2F	0A	FF	28
+ン	ス	を	s１x１手	に	い	れ	た	！	FX--------------->	
+
 //////////////random messed up thing///////////////
 85	28	00	52	00	30	2E	02	02	00	50	42	5B	1F	14	40
 ‥	PAUSE	CLR	EOS	WTVRTHISIS	Ref?	OPEN
