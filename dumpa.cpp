@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define DEBUG false
+#define DEBUG true
 
 //TO-DO:
 //goal: match appearance of in game textbox (bar debug output)
@@ -397,7 +397,9 @@ int main()
 		//finalize a selection list?
 		else if(cur == 0x5B)
 		{
-			fprintf(pDUMP,DEBUG ? "</SEL>\n" : "\n");
+			fprintf(pDUMP,"\n</SEL@%0.6X>\n\n",addr);
+			col = -1;
+			row = 0;
 		}
 		//bring up subtextbox (IE to display your money in a shop)
 		//note: technically, if you use this code your cursor will move to the start of
@@ -407,14 +409,14 @@ int main()
 		//this could be good to keep in mind if something wierd is going on 
 		else if(cur == 0x5D)
 		{
-			fprintf(pDUMP,DEBUG ? "\n<SBOX>" : "\n",addr);
+			fprintf(pDUMP,"\n<SUBBOX@%0.6X>",addr);
 		}
 		//show current $  in subtextbox
 		//using this after 0x5D causes the current text in the textbox to be cleared
 		//<SBOX> and <$> are literally always in tandem, and together they effectively equate to a <CLEAR>
 		else if(cur == 0x5F)
 		{
-			fprintf(pDUMP,DEBUG ? "<$@%0.6X>\n" : "\n",addr);
+			fprintf(pDUMP,"<$>\n");
 			col = -1;
 			row = 0;
 		}
