@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define DEBUG true
+#define DEBUG false
 
 //TO-DO:
 //goal: match appearance of in game textbox (bar debug output)
@@ -253,16 +253,9 @@ int main()
 		else if(cur == 0x31)
 		{
 			advance(cur,pROM,addr);
-			if(cur == 0x00)
-			{
-				//dump control
-				advance(cur,pROM,addr);
-				fprintf(pDUMP,DEBUG ? "<ATK>" : "",cur);
-			}
-			else
-			{
-				fprintf(pDUMP,DEBUG ? "<31?%0.2X>" : "",cur);	
-			}				
+			fprintf(pDUMP,DEBUG ? "<ATK%0.2X?" : "",cur);
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "%0.2X>" : "",cur);		
 		}
 		//characchehter movement
 		else if(cur == 0x32)

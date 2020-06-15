@@ -30,13 +30,6 @@ Random dash
 
 　　　スピアを手にいれた！ぇ
 ronk
-////////////////////////////
-
-<ポポイ>『へへん！
-　これでオイラも大魔法使いだな！
-ま
-<RET@0A3873><EOS@0A3874>
-rrrrrrrrrrrrrrrrronk
 ///////////////////////////////////
 仲間の武器に<NL@0A6BF9>
 、水の能力をもたせる<EOS@0A6C06>
@@ -47,21 +40,6 @@ Should be all one line(in stats screen)
 く、
 <CLOSE@09938F>
 fix me
-/////////////////////////////
-ノーム「にゃにおうっ！？てめー
-　なまいきだ！イジメちゃるッ！
-
-<CLOSE@099246>
-
-<EOS@09924B>
-
-<REF?08>
-
-<OPEN@09925F>
-<ポポイ>『えい！それ！
-<EOS@09926C>
-They were fighting and there were
-flashes and stuff
 /////////////////////////////
 <OPEN@092A30>
 「‥なんだ、客か。
