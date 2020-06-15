@@ -1,13 +1,9 @@
-つぐ<NL:094F18>
-　ブロンズランスを手にいれた！　<WAIT10><PAUSE>
-Wierd stuff here. Recieving an item
-・・・・・・・・・・・・・・・
 に<REF?30>）<REF?50>「‥なんだ、客か。<NL:092A3B>
 　めんどうなモンは　おいてないぞ<FORM?80><SBOX><$><WRAP>
 　（<SEL><SCOL3>　かいにきた<SCOL9>　うりにきた　）</SEL>
 <WRAP>
 ぱ<EOS:092A6B>
-Waaaaatf is going on here
+Waaaaat is going on here
 the options should be on the next page
 ・・・・・・・・・・・・・・・・・・・・・・・・・・・・・
 <ポポイ>『ネエちゃん！<NL:098440>

@@ -141,7 +141,7 @@ int main()
 		else if(cur == 0x1E)
 		{
 			advance(cur,pROM,addr);
-			fprintf(pDUMP,"<1E?%0.2X>",cur);
+			fprintf(pDUMP,DEBUG ? "<1E?%0.2X>" : "",cur);
 		}
 		//ehhh idunno. Movement related?
 		else if(cur == 0x20)
