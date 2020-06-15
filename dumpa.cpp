@@ -21,6 +21,7 @@ void gNL(FILE* pDUMP, int &col, int &row)
 	if(row == 2)
 	{
 		//wraps to new textbox after the third row
+		//would print address too, but don't want to add another param to the fn
 		fprintf(pDUMP,DEBUG ? "\n<RWRAP>\n" : "\n\n");
 		row = 0;
 	}
@@ -398,9 +399,15 @@ int main()
 			fprintf(pDUMP,DEBUG ? "</SEL>\n" : "\n");
 		}
 		//bring up subtextbox (IE to display your money in a shop)
+		//note: technically, if you use this code your cursor will move to the start of
+		//the current textbox and any new text will overwrite the existing text.
+		//though, it seems like the devs always(?) move to a new box beforehand.
+		//this could be good to keep in mind if something wierd is going on 
 		else if(cur == 0x5D)
 		{
 			fprintf(pDUMP,DEBUG ? "<SBOX>" : "");
+			col = -1;
+			row = 0;
 		}
 		//show current $  in subtextbox
 		else if(cur == 0x5F)

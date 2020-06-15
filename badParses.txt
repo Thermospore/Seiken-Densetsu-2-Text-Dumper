@@ -37,19 +37,6 @@ Missing NL
 Different lines for different locs from the cannon dude. They all just reference to this afterwards:
 　さあ、大砲にはいっとくれ！
 <CLOSE:09308C>
-///////////////////////////
-<OPEN:097CC0>
-ニキータ「ニャハ、つかまっちゃい<CWRAP>
-　ましたよ。ところで、たすけて<NL:097CE3>
-　もらっといてニャんですけど‥Ｆ<EOS:097CF6>
-
-<PAUSE><NL:097CF9>
-<FORM?80><SBOX><$>「とくべつしゅっちょうサービス！<CWRAP>
-　セーブもするよ。にゃひひひ！<NL:097D21>
-<RWRAP>
-　（<SEL><SCOL3>　セーブ<SCOL7>　かう<SCOLA>　うる　）</SEL>
-　<EOS:097D3F>
-Random F
 ・・・・・・・・・・・・・・・・・・
 <OPEN:09756B>
 「ラビと男で　ラビ男～っ！<WAIT08><NL:09757F>

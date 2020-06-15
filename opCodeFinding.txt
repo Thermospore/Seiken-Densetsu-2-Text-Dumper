@@ -1,1 +1,0 @@
-5D MOVES CURSOR TO 0,0!!! Implement like clear
