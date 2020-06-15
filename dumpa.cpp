@@ -264,16 +264,9 @@ int main()
 		else if(cur == 0x34)
 		{
 			advance(cur,pROM,addr);
-			if(cur == 0x00)
-			{
-				//dump action control
-				advance(cur,pROM,addr);
-				fprintf(pDUMP,DEBUG ? "<ACT>" : "");
-			}
-			else
-			{
-				fprintf(pDUMP,DEBUG ? "<34?%0.2X>" : "",cur);
-			}
+			fprintf(pDUMP,DEBUG ? "<ACT%0.2X?" : "",cur);
+			advance(cur,pROM,addr);
+			fprintf(pDUMP,DEBUG ? "%0.2X>" : "",cur);
 		}
 		//item movement?
 		else if(cur == 0x39)
