@@ -6,4 +6,9 @@ Everyone in パンドーラ王国 had their たましい
 OK now we gotta take ポポイ to the 神殿 to get
 the 種子 to try and fix his 記憶喪失.
 
+ボス戦後にハマる条件は
+「最後にリングコマンドを開いた時の操作キャラ」と
+「ボス撃破演出時の操作キャラ」が
+異なる際に発生するそうです。
+
 ーーーーーーーーーーーーーーーーーーーーーーーーー
